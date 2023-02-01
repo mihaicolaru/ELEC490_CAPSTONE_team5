@@ -18,7 +18,7 @@ LED_1 = 'SPI2_MISO'     # 22
 LED_2 = 'SPI1_CS0'      # 24
 LED_3 = 'SPI1_CS1'      # 26
 
-MOT_1 = 'LCD_BL_PWM'    # 32
+MOT_1 = 'LCD_BL_PW'     # 32
 MOT_2 = 'GPIO_PE6'      # 33
 
 
