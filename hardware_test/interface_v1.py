@@ -107,7 +107,7 @@ def testLocking():
 
 def testPWM():
     # set directgion for each motor
-    GPIO.output(IN_A, GPIO.HIGH)
+    GPIO.output(IN_B, GPIO.HIGH)
     GPIO.output(IN_D, GPIO.HIGH)
 
     dc=0                               # set dc variable to 0 for 0%
@@ -115,7 +115,7 @@ def testPWM():
     pwm1.start(dc)                      # Start PWM with 0% duty cycle
     pwm2.start(dc)                      # Start PWM with 0% duty cycle
     
-    for dc in range(0, 100, 10):    # Loop 0 to 100 stepping dc by 5 each loop
+    for dc in range(20, 50, 10):    # Loop 0 to 100 stepping dc by 5 each loop
       pwm1.ChangeDutyCycle(dc)
       pwm2.ChangeDutyCycle(dc)
       time.sleep(2)
