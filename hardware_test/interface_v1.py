@@ -108,14 +108,14 @@ def testLocking():
 def testPWM():
     # set directgion for each motor
     GPIO.output(IN_B, GPIO.HIGH)
-    GPIO.output(IN_D, GPIO.HIGH)
+    GPIO.output(IN_C, GPIO.HIGH)
 
     dc=0                               # set dc variable to 0 for 0%
     
     pwm1.start(dc)                      # Start PWM with 0% duty cycle
     pwm2.start(dc)                      # Start PWM with 0% duty cycle
     
-    for dc in range(20, 50, 10):    # Loop 0 to 100 stepping dc by 5 each loop
+    for dc in range(0, 20, 5):    # Loop 0 to 100 stepping dc by 5 each loop
       pwm1.ChangeDutyCycle(dc)
       pwm2.ChangeDutyCycle(dc)
       time.sleep(2)
@@ -124,6 +124,8 @@ def testPWM():
     pwm1.ChangeDutyCycle(0)
     pwm2.ChangeDutyCycle(0)
 
+    pwm1.stop()
+    pwm2.stop()
 
 def button1(channel):
     print("button 1 pressed")
@@ -210,7 +212,7 @@ GPIO.add_event_detect(BUT_2, GPIO.RISING, callback=button2, bouncetime=1)
 GPIO.add_event_detect(BUT_3, GPIO.RISING, callback=button3, bouncetime=1)
 
 
-killAll()
+# killAll()
 
 # ===================== main =====================
 
