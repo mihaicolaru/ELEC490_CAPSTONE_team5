@@ -14,12 +14,23 @@ BUT_1 = 'UART2_CTS'     # 36
 BUT_2 = 'DAP4_DIN'      # 38
 BUT_3 = 'DAP4_DOUT'     # 40
 
-LED_1 = 'SPI_2_MISO'     # 22
+LED_1 = 'SPI2_MISO'     # 22
 LED_2 = 'SPI1_CS0'      # 24
 LED_3 = 'SPI1_CS1'      # 26
 
-MOT_1 = 'LCD_BL_PW'     # 32
-MOT_2 = 'GPIO_PE6'      # 33
+MOT_1 = 'GPIO_PE6'      # 33
+
+IN_A = 'DAP4_SCLK'      # 12
+IN_B = 'GPIO_PZ0'       # 31
+
+MOT_2 = 'LCD_BL_PW'     # 32
+
+IN_C = 'SPI1_MOSI'      # 19
+IN_D = 'CAM_AF_EN'      # 29
+
+
+
+
 
 
 # ===================== methods =====================
@@ -60,12 +71,12 @@ def testLocking():
 
             time.sleep(2)
 
-            print("unlocking compartment 1")
+            # print("unlocking compartment 1")
 
             # kit.servo[SERV_1].angle = 180
                 
         elif compartment == '2':
-            print("locking compartment 1")
+            print("locking compartment 2")
 
             kit.servo[SERV_2].angle = 0
 
@@ -76,7 +87,7 @@ def testLocking():
             # kit.servo[SERV_2].angle = 180
             
         elif compartment == '3':
-            print("locking compartment 1")
+            print("locking compartment 3")
 
             kit.servo[SERV_3].angle = 0
 
@@ -95,14 +106,23 @@ def testLocking():
             print("invalid compartment")
 
 def testPWM():
+    # set directgion for each motor
+    GPIO.output(IN_A, GPIO.HIGH)
+    GPIO.output(IN_D, GPIO.HIGH)
+
     dc=0                               # set dc variable to 0 for 0%
+    
     pwm1.start(dc)                      # Start PWM with 0% duty cycle
     pwm2.start(dc)                      # Start PWM with 0% duty cycle
+    
     for dc in range(0, 100, 10):    # Loop 0 to 100 stepping dc by 5 each loop
       pwm1.ChangeDutyCycle(dc)
       pwm2.ChangeDutyCycle(dc)
       time.sleep(2)
       print(f'sending {dc} to motors 1 and 2')
+    
+    pwm1.ChangeDutyCycle(0)
+    pwm2.ChangeDutyCycle(0)
 
 
 def button1(channel):
@@ -168,8 +188,18 @@ GPIO.setup(LED_1, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(LED_2, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(LED_3, GPIO.OUT, initial=GPIO.LOW)
 
+
+# MOTORS
+
 GPIO.setup(MOT_1, GPIO.OUT)
 GPIO.setup(MOT_2, GPIO.OUT)
+
+GPIO.setup(IN_A, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(IN_B, GPIO.OUT, initial=GPIO.LOW)
+
+GPIO.setup(IN_C, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(IN_D, GPIO.OUT, initial=GPIO.LOW)
+
 
 pwm1 = GPIO.PWM(MOT_1, 50)   # Initialize PWM on pwmPin 50Hz frequency
 pwm2 = GPIO.PWM(MOT_2, 50)   # Initialize PWM on pwmPin 50Hz frequency
