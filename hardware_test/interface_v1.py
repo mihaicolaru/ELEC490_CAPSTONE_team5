@@ -14,7 +14,7 @@ BUT_1 = 'UART2_CTS'     # 36
 BUT_2 = 'DAP4_DIN'      # 38
 BUT_3 = 'DAP4_DOUT'     # 40
 
-LED_1 = 'SPI2_MISO'     # 22
+LED_1 = 'SPI_2_MISO'     # 22
 LED_2 = 'SPI1_CS0'      # 24
 LED_3 = 'SPI1_CS1'      # 26
 
@@ -71,7 +71,7 @@ def testLocking():
 
             time.sleep(2)
 
-            print("unlocking compartment 1")
+            # print("unlocking compartment 1")
 
             # kit.servo[SERV_2].angle = 180
             
@@ -82,11 +82,12 @@ def testLocking():
 
             time.sleep(2)
 
-            print("unlocking compartment 1")
+            # print("unlocking compartment 1")
 
             # kit.servo[SERV_3].angle = 180
 
         elif compartment == 'u':
+            print("unlocking all")
             killAll()    
         elif compartment == 'q':
             break
@@ -101,7 +102,7 @@ def testPWM():
       pwm1.ChangeDutyCycle(dc)
       pwm2.ChangeDutyCycle(dc)
       time.sleep(2)
-      print(f'sending {dc} to motor 1')
+      print(f'sending {dc} to motors 1 and 2')
 
 
 def button1(channel):
