@@ -58,10 +58,10 @@ def testPWM():
     pwm1.start(dc)                      # Start PWM with 0% duty cycle
     pwm2.start(dc)                      # Start PWM with 0% duty cycle
     
-    for dc in range(20, 50, 10):
-      pwm1.ChangeDutyCycle(dc)
-      pwm2.ChangeDutyCycle(2 * dc)
-      time.sleep(3)
+    for dc in range(20, 30, 10):
+      pwm1.ChangeDutyCycle(90)
+      pwm2.ChangeDutyCycle(15)
+      time.sleep(5)
       print(f'sending {dc} to motors 1 and 2')
     
     pwm1.ChangeDutyCycle(0)
@@ -89,8 +89,8 @@ GPIO.setup(IN_C, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(IN_D, GPIO.OUT, initial=GPIO.LOW)
 
 
-pwm1 = GPIO.PWM(MOT_1, 100)   # Initialize PWM on pwmPin 50Hz frequency
-pwm2 = GPIO.PWM(MOT_2, 100)   # Initialize PWM on pwmPin 50Hz frequency
+pwm1 = GPIO.PWM(MOT_1, 50)   # Initialize PWM on pwmPin 50Hz frequency
+pwm2 = GPIO.PWM(MOT_2, 50)   # Initialize PWM on pwmPin 50Hz frequency
 
 testPWM()
 
