@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 from adafruit_servokit import ServoKit
 import time
+import tkinter
 
 # ===================== hardware =====================
 
@@ -129,6 +130,7 @@ def testPWM():
 
 def button1(channel):
     print("button 1 pressed")
+    kit.servo[SERV_1].angle = 0
     
     # GPIO.output(LED_1, GPIO.LOW)
 
@@ -140,6 +142,7 @@ def button1(channel):
 
 def button2(channel):
     print("button 2 pressed")
+    kit.servo[SERV_2].angle = 0
     # print("compartment 2 is closed")
     # print("locking")
 
@@ -155,6 +158,7 @@ def button2(channel):
     
 def button3(channel):
     print("button 3 pressed")
+    kit.servo[SERV_3].angle = 0
     # print("compartment 3 is closed")
     # print("locking")
 
