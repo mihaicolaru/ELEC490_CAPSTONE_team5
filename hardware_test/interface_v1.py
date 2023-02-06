@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 from adafruit_servokit import ServoKit
 import time
+import tkinter
 
 # ===================== hardware =====================
 
@@ -29,47 +30,51 @@ IN_C = 'SPI1_MOSI'      # 19
 IN_D = 'CAM_AF_EN'      # 29
 
 
-
-
-
-
 # ===================== methods =====================
 
 def testLED():
     while 1:
-        compartment = input("test LED (1, 2 or 3, q to quit)")
+        compartment = input("test LED (1, 2 or 3)\nk - kill all\nq - quit\n")
 
         if compartment == '1':
+            print("turning on LED 1")
             GPIO.output(LED_1, GPIO.HIGH)
-            GPIO.output(LED_2, GPIO.LOW)
-            GPIO.output(LED_3, GPIO.LOW)
+            # GPIO.output(LED_2, GPIO.LOW)
+            # GPIO.output(LED_3, GPIO.LOW)
+
         elif compartment == '2':
-            GPIO.output(LED_1, GPIO.LOW)
+            print("turning on LED 2")
+            # GPIO.output(LED_1, GPIO.LOW)
             GPIO.output(LED_2, GPIO.HIGH)
-            GPIO.output(LED_3, GPIO.LOW)
+            # GPIO.output(LED_3, GPIO.LOW)
+
         elif compartment == '3':
-            GPIO.output(LED_1, GPIO.LOW)
-            GPIO.output(LED_2, GPIO.LOW)
+            print("turning on LED 3")
+            # GPIO.output(LED_1, GPIO.LOW)
+            # GPIO.output(LED_2, GPIO.LOW)
             GPIO.output(LED_3, GPIO.HIGH)
+
+        elif compartment == 'k':
+            print("turning off all LEDs")
+            killAllLED()
+
         elif compartment == 'q':
-            GPIO.output(LED_1, GPIO.LOW)
-            GPIO.output(LED_2, GPIO.LOW)
-            GPIO.output(LED_3, GPIO.LOW)
             break
+
         else:
-            print("invalid compartment")
+            print("invalid input")
 
 
 def testLocking():
     while 1:
-        compartment = input("test Locking (1, 2 or 3, q to quit)")
+        compartment = input("test Locking (1, 2 or 3)\nu - unlock all\nq - quit\n")
 
         if compartment == '1':
             print("locking compartment 1")
 
             kit.servo[SERV_1].angle = 0
 
-            time.sleep(2)
+            # time.sleep(2)
 
             # print("unlocking compartment 1")
 
@@ -80,7 +85,7 @@ def testLocking():
 
             kit.servo[SERV_2].angle = 0
 
-            time.sleep(2)
+            # time.sleep(2)
 
             # print("unlocking compartment 1")
 
@@ -91,7 +96,7 @@ def testLocking():
 
             kit.servo[SERV_3].angle = 0
 
-            time.sleep(2)
+            # time.sleep(2)
 
             # print("unlocking compartment 1")
 
@@ -99,36 +104,159 @@ def testLocking():
 
         elif compartment == 'u':
             print("unlocking all")
-            killAll()    
+            killAllServo()
+
         elif compartment == 'q':
             break
+
         else:
-            print("invalid compartment")
+            print("invalid input")
 
 def testPWM():
-    # set directgion for each motor
-    GPIO.output(IN_B, GPIO.HIGH)
-    GPIO.output(IN_C, GPIO.HIGH)
-
     dc=0                               # set dc variable to 0 for 0%
     
     pwm1.start(dc)                      # Start PWM with 0% duty cycle
     pwm2.start(dc)                      # Start PWM with 0% duty cycle
-    
-    for dc in range(0, 20, 5):    # Loop 0 to 100 stepping dc by 5 each loop
-      pwm1.ChangeDutyCycle(dc)
-      pwm2.ChangeDutyCycle(dc)
-      time.sleep(2)
-      print(f'sending {dc} to motors 1 and 2')
-    
-    pwm1.ChangeDutyCycle(0)
-    pwm2.ChangeDutyCycle(0)
 
-    pwm1.stop()
-    pwm2.stop()
+    while 1:
+        # set direction for each motor
+        direction = input("select direction:\n1 - forward\n2 - backward\n3 - turn right\n4 - turn left\nk - kill pwm\nq - quit\n")
+
+        if direction == '1':
+            GPIO.output(IN_A, GPIO.LOW)
+            GPIO.output(IN_B, GPIO.HIGH)
+            GPIO.output(IN_C, GPIO.HIGH)
+            GPIO.output(IN_D, GPIO.LOW)
+
+            speed = input("forward - select speed:\n1 - slow\n2 - cruise\n3 - max\nq - quit\n")
+            if speed == ' 1':
+                dc = 20
+            elif speed == '2':
+                dc = 50
+            elif speed == '3':
+                dc = 80
+            elif speed == 'q':
+                dc = 0            
+
+            input("start test?")
+
+            print(f'sending {dc} to motors 1 and 2')
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+            
+            input("press enter to stop")
+
+            print("stopping motors")
+            dc = 0
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+
+        elif direction == '2':
+            GPIO.output(IN_A, GPIO.HIGH)
+            GPIO.output(IN_B, GPIO.LOW)
+            GPIO.output(IN_C, GPIO.LOW)
+            GPIO.output(IN_D, GPIO.HIGH)
+
+            speed = input("backward - select speed:\n1 - slow\n2 - cruise\n3 - max\nq - quit\n")
+            if speed == ' 1':
+                dc = 20
+            elif speed == '2':
+                dc = 50
+            elif speed == '3':
+                dc = 80
+            elif speed == 'q':
+                dc = 0            
+
+            input("start test?")
+
+            print(f'sending {dc} to motors 1 and 2')
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+            
+            input("press enter to stop")
+
+            print("stopping motors")
+            dc = 0
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+
+        elif direction == '3':
+            GPIO.output(IN_A, GPIO.LOW)
+            GPIO.output(IN_B, GPIO.HIGH)
+            GPIO.output(IN_C, GPIO.HIGH)
+            GPIO.output(IN_D, GPIO.LOW)
+
+            speed = input("turn right - select speed:\n1 - slow\n2 - cruise\n3 - max\nq - quit\n")
+            if speed == ' 1':
+                dc = 20
+            elif speed == '2':
+                dc = 50
+            elif speed == '3':
+                dc = 80
+            elif speed == 'q':
+                dc = 0            
+
+            input("start test?")
+
+            print(f'sending {dc} to motors 1 and 2')
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+            
+            input("press enter to stop")
+
+            print("stopping motors")
+            dc = 0
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+
+        elif direction == '4':
+            GPIO.output(IN_A, GPIO.LOW)
+            GPIO.output(IN_B, GPIO.HIGH)
+            GPIO.output(IN_C, GPIO.HIGH)
+            GPIO.output(IN_D, GPIO.LOW)
+
+            speed = input("turn left - select speed:\n1 - slow\n2 - cruise\n3 - max\nq - quit\n")
+            if speed == ' 1':
+                dc = 20
+            elif speed == '2':
+                dc = 50
+            elif speed == '3':
+                dc = 80
+            elif speed == 'q':
+                dc = 0            
+
+            input("start test?")
+
+            print(f'sending {dc} to motors 1 and 2')
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+            
+            input("press enter to stop")
+
+            print("stopping motors")
+            dc = 0
+            pwm1.ChangeDutyCycle(dc)
+            pwm2.ChangeDutyCycle(dc)
+
+        elif direction == 'k':
+            print("killing pwm")
+            pwm1.ChangeDutyCycle(0)
+            pwm2.ChangeDutyCycle(0)
+
+        elif direction == 'q':
+            pwm1.ChangeDutyCycle(0)
+            pwm2.ChangeDutyCycle(0)
+
+            pwm1.stop()
+            pwm2.stop()
+            break
+
+        else:
+            print("invalid input")
 
 def button1(channel):
     print("button 1 pressed")
+    kit.servo[SERV_1].angle = 0
     
     # GPIO.output(LED_1, GPIO.LOW)
 
@@ -140,6 +268,7 @@ def button1(channel):
 
 def button2(channel):
     print("button 2 pressed")
+    kit.servo[SERV_2].angle = 0
     # print("compartment 2 is closed")
     # print("locking")
 
@@ -155,6 +284,7 @@ def button2(channel):
     
 def button3(channel):
     print("button 3 pressed")
+    kit.servo[SERV_3].angle = 0
     # print("compartment 3 is closed")
     # print("locking")
 
@@ -168,14 +298,15 @@ def button3(channel):
     
     # kit.servo[SERV_3].angle = 0
 
-def killAll():
-    kit.servo[SERV_1].angle = 180
-    kit.servo[SERV_2].angle = 180
-    kit.servo[SERV_3].angle = 180
-
+def killAllLED():
     GPIO.output(LED_1, GPIO.LOW)
     GPIO.output(LED_2, GPIO.LOW)
     GPIO.output(LED_3, GPIO.LOW)
+
+def killAllServo():
+    kit.servo[SERV_1].angle = 180
+    kit.servo[SERV_2].angle = 180
+    kit.servo[SERV_3].angle = 180
 
 
 # ===================== setup =====================
@@ -212,15 +343,14 @@ GPIO.add_event_detect(BUT_2, GPIO.RISING, callback=button2, bouncetime=1)
 GPIO.add_event_detect(BUT_3, GPIO.RISING, callback=button3, bouncetime=1)
 
 
-# killAll()
-
 # ===================== main =====================
 
-print("q to quit")
+killAllLED()
+# killAllServo()
 
 while 1:
     print("which component would you like to test?")
-    choice = input("1: LEDS\n2: Locking\n3: Motors\n")
+    choice = input("1: LEDS\n2: Locking\n3: Motors\nq: quit\n")
 
     if choice == '1':
         testLED()
@@ -234,7 +364,9 @@ while 1:
         print("incorrect input")
     
     
-pwm1.stop()                         # stop PWM1
-pwm2.stop()                         # stop PWM1
-killAll()
+pwm1.stop()     # stop PWM1
+pwm2.stop()     # stop PWM1
+
+killAllLED()    # turn off LEDs
+
 GPIO.cleanup()
