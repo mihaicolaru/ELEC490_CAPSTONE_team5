@@ -4,13 +4,22 @@ from PIL import ImageTk, Image
 import time
 # import robot_controller
 
+auth = ""
+
+compartments_status = dict()
+compartments_status["1"] = "Empty"
+compartments_status["2"] = "Empty"
+compartments_status["3"] = "Empty"
 
 def start_page():
     nurse_login = ctk.CTkFrame(master=root)
     nurse_login.pack(pady=20, padx=60, fill="both", expand=True)
 
     label = ctk.CTkLabel(master=nurse_login, text="Nurse Authentication", font=("Roboto", 40))
-    label.pack(pady=100, padx=10)
+    label.grid(row=0, column=1, pady=100, padx=10)
+
+    button = ctk.CTkButton(master=nurse_login, text="1", width=100, height=100, font=("Roboto", 30), command=lambda: make_combination("1"))
+    button.grid(row=1, column=0)
 
     entry1 = ctk.CTkEntry(master=nurse_login, placeholder_text="Password", width=750, height=50, font=("Roboto", 24), show="*")
     entry1.pack(pady=12, padx=10)
@@ -73,10 +82,8 @@ def set_off():
 
 # ======================== BUTTON COMMANDS ========================
 
-compartments_status = dict()
-compartments_status["1"] = "Empty"
-compartments_status["2"] = "Empty"
-compartments_status["3"] = "Empty"
+def make_combination(num): 
+    auth += num
 
 def go_to_choose_compartment(frame, from_page, text_box): 
     if from_page == "login": 
