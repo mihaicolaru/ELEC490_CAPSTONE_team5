@@ -1,4 +1,8 @@
-from tkinter import *
+import customtkinter as ctk
+from tkinter import Tk, Frame, Canvas
+from PIL import ImageTk, Image  
+import time
+import robot_controller
 
 root = Tk()
 root.title("Mybot Interface")
