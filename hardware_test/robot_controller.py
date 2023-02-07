@@ -102,6 +102,69 @@ def testLocking():
 
         else:
             print("invalid input")
+    
+def turn_off_led(compartment):
+    if compartment == '1':
+        print("turning on LED 1")
+        GPIO.output(LED_1, GPIO.LOW)
+        # GPIO.output(LED_2, GPIO.LOW)
+        # GPIO.output(LED_3, GPIO.LOW)
+
+    elif compartment == '2':
+        print("turning on LED 2")
+        # GPIO.output(LED_1, GPIO.LOW)
+        GPIO.output(LED_2, GPIO.LOW)
+        # GPIO.output(LED_3, GPIO.LOW)
+
+    elif compartment == '3':
+        print("turning on LED 3")
+        # GPIO.output(LED_1, GPIO.LOW)
+        # GPIO.output(LED_2, GPIO.LOW)
+        GPIO.output(LED_3, GPIO.LOW)
+
+    else:
+        print("turning off all LEDs")
+        killAllLED()
+
+def lock_compartment(compartment): 
+    if compartment == '1':
+        print("locking compartment 1")
+
+        kit.servo[SERV_1].angle = 0
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_1].angle = 180
+            
+    elif compartment == '2':
+        print("locking compartment 2")
+
+        kit.servo[SERV_2].angle = 0
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_2].angle = 180
+        
+    elif compartment == '3':
+        print("locking compartment 3")
+
+        kit.servo[SERV_3].angle = 0
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_3].angle = 180
+
+    else:
+        print("unlocking all")
+        killAllServo()
+
+
 
 def testPWM():
     dc=0                               # set dc variable to 0 for 0%

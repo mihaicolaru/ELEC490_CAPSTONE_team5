@@ -2,7 +2,7 @@ import customtkinter as ctk
 from tkinter import Tk, Frame, Canvas
 from PIL import ImageTk, Image  
 import time
-# import robot_controller
+import robot_controller
 
 auth = ""
 

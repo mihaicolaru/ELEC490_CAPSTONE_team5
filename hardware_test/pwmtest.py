@@ -48,22 +48,28 @@ IN_D = 'CAM_AF_EN'      # 29
 
 def testPWM():
     # set directgion for each motor
-    GPIO.output(IN_A, GPIO.LOW)
-    GPIO.output(IN_B, GPIO.HIGH)
-    GPIO.output(IN_C, GPIO.HIGH)
-    GPIO.output(IN_D, GPIO.LOW)
+    GPIO.output(IN_A, GPIO.HIGH)
+    GPIO.output(IN_B, GPIO.LOW)
+
+    GPIO.output(IN_C, GPIO.LOW)
+    GPIO.output(IN_D, GPIO.HIGH)
 
     dc=0                               # set dc variable to 0 for 0%
     
     pwm1.start(dc)                      # Start PWM with 0% duty cycle
     pwm2.start(dc)                      # Start PWM with 0% duty cycle
     
-    for dc in range(20, 30, 10):
-      pwm1.ChangeDutyCycle(90)
-      pwm2.ChangeDutyCycle(15)
-      time.sleep(5)
-      print(f'sending {dc} to motors 1 and 2')
+    # for dc in range(20, 30, 10):
+    #   pwm1.ChangeDutyCycle(0)
+    #   pwm2.ChangeDutyCycle(10)
+    #   time.sleep(3)
+    #   print(f'sending {dc} to motors 1 and 2')
     
+    pwm1.ChangeDutyCycle(50)
+    pwm2.ChangeDutyCycle(30)
+    
+    input("press enter")
+
     pwm1.ChangeDutyCycle(0)
     pwm2.ChangeDutyCycle(0)
 
@@ -89,8 +95,8 @@ GPIO.setup(IN_C, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(IN_D, GPIO.OUT, initial=GPIO.LOW)
 
 
-pwm1 = GPIO.PWM(MOT_1, 50)   # Initialize PWM on pwmPin 50Hz frequency
-pwm2 = GPIO.PWM(MOT_2, 50)   # Initialize PWM on pwmPin 50Hz frequency
+pwm1 = GPIO.PWM(MOT_1, 100)   # Initialize PWM on pwmPin 50Hz frequency
+pwm2 = GPIO.PWM(MOT_2, 100)   # Initialize PWM on pwmPin 50Hz frequency
 
 testPWM()
 
