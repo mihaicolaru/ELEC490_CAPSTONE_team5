@@ -54,54 +54,6 @@ def turn_on_led(compartment):
     else:
         print("turning off all LEDs")
         killAllLED()
-
-
-def testLocking():
-    while 1:
-        compartment = input("test Locking (1, 2 or 3)\nu - unlock all\nq - quit\n")
-
-        if compartment == '1':
-            print("locking compartment 1")
-
-            kit.servo[SERV_1].angle = 0
-
-            # time.sleep(2)
-
-            # print("unlocking compartment 1")
-
-            # kit.servo[SERV_1].angle = 180
-                
-        elif compartment == '2':
-            print("locking compartment 2")
-
-            kit.servo[SERV_2].angle = 0
-
-            # time.sleep(2)
-
-            # print("unlocking compartment 1")
-
-            # kit.servo[SERV_2].angle = 180
-            
-        elif compartment == '3':
-            print("locking compartment 3")
-
-            kit.servo[SERV_3].angle = 0
-
-            # time.sleep(2)
-
-            # print("unlocking compartment 1")
-
-            # kit.servo[SERV_3].angle = 180
-
-        elif compartment == 'u':
-            print("unlocking all")
-            killAllServo()
-
-        elif compartment == 'q':
-            break
-
-        else:
-            print("invalid input")
     
 def turn_off_led(compartment):
     if compartment == '1':
@@ -125,6 +77,44 @@ def turn_off_led(compartment):
     else:
         print("turning off all LEDs")
         killAllLED()
+
+def unlock_compartment(compartment): 
+    if compartment == '1':
+        print("locking compartment 1")
+
+        kit.servo[SERV_1].angle = 180
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_1].angle = 180
+            
+    elif compartment == '2':
+        print("locking compartment 2")
+
+        kit.servo[SERV_2].angle = 180
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_2].angle = 180
+        
+    elif compartment == '3':
+        print("locking compartment 3")
+
+        kit.servo[SERV_3].angle = 180
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_3].angle = 180
+
+    else:
+        print("unlocking all")
+        killAllServo()
 
 def lock_compartment(compartment): 
     if compartment == '1':

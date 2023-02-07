@@ -2,30 +2,42 @@ import customtkinter as ctk
 from tkinter import Tk, Frame, Canvas
 from PIL import ImageTk, Image  
 import time
-import robot_controller
-
-auth = ""
-
-compartments_status = dict()
-compartments_status["1"] = "Empty"
-compartments_status["2"] = "Empty"
-compartments_status["3"] = "Empty"
+import robot_controller as rc
 
 def start_page():
-    nurse_login = ctk.CTkFrame(master=root)
-    nurse_login.pack(pady=20, padx=60, fill="both", expand=True)
+    auth_frame = ctk.CTkFrame(master=root)
+    auth_frame.pack(pady=20, padx=60, fill="both", expand=True)
 
-    label = ctk.CTkLabel(master=nurse_login, text="Nurse Authentication", font=("Roboto", 40))
-    label.grid(row=0, column=1, pady=100, padx=10)
+    label = ctk.CTkLabel(master=auth_frame, text="Nurse Authentication", font=("Roboto", 40))
+    label.grid(row=0, column=0, pady=(30, 20), padx=10, sticky="ew")
 
-    button = ctk.CTkButton(master=nurse_login, text="1", width=100, height=100, font=("Roboto", 30), command=lambda: make_combination("1"))
-    button.grid(row=1, column=0)
+    button_1 = ctk.CTkButton(master=auth_frame, text="1", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("1"))
+    button_2 = ctk.CTkButton(master=auth_frame, text="2", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("2"))
+    button_3 = ctk.CTkButton(master=auth_frame, text="3", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("3"))
+    button_4 = ctk.CTkButton(master=auth_frame, text="4", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("4"))
+    button_5 = ctk.CTkButton(master=auth_frame, text="5", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("5"))
+    button_6 = ctk.CTkButton(master=auth_frame, text="6", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("6"))
+    button_7 = ctk.CTkButton(master=auth_frame, text="7", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("7"))
+    button_8 = ctk.CTkButton(master=auth_frame, text="8", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("8"))
+    button_9 = ctk.CTkButton(master=auth_frame, text="9", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("9"))
+    button_0 = ctk.CTkButton(master=auth_frame, text="0", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("0"))
+    submit = ctk.CTkButton(master=auth_frame, text="Submit", width=200, height=100, font=("Roboto", 20), corner_radius=0, command=lambda: go_to_choose_compartment(auth_frame))
+    
+    button_1.grid(row=1, column=0, sticky="ne")
+    button_2.grid(row=1, column=1)
+    button_3.grid(row=1, column=2, sticky="nw")
+    button_4.grid(row=2, column=0, sticky="ne")
+    button_5.grid(row=2, column=1)
+    button_6.grid(row=2, column=2, sticky="nw")
+    button_7.grid(row=3, column=0, sticky="ne")
+    button_8.grid(row=3, column=1)
+    button_9.grid(row=3, column=2, sticky="nw")
+    button_0.grid(row=4, column=0, pady=(0, 100), sticky="ne")
+    submit.grid(row=4, column=1, columnspan=2, pady=(0, 100))
 
-    entry1 = ctk.CTkEntry(master=nurse_login, placeholder_text="Password", width=750, height=50, font=("Roboto", 24), show="*")
-    entry1.pack(pady=12, padx=10)
+    # entry1 = ctk.CTkEntry(master=auth_frame, placeholder_text="Password", width=750, height=50, font=("Roboto", 24), show="*")
+    # entry1.pack(pady=12, padx=10)
 
-    button = ctk.CTkButton(master=nurse_login, text="Submit", width=200, height=50, font=("Roboto", 20), command=lambda: go_to_choose_compartment(nurse_login, "login", entry1))
-    button.pack(pady=30, padx=10)
 
 
 def choose_compartment():
@@ -36,21 +48,21 @@ def choose_compartment():
     label = ctk.CTkLabel(master=compartment_frame, text="Choose compartment to load", font=("Roboto", 40))
     label.grid(row=0, column=0, columnspan=2, pady=30, padx=10)
 
-    comp1_button = ctk.CTkButton(master=compartment_frame, text="1", width=200, height=50, font=("Roboto", 20), fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "1"))
-    comp1_button.grid(row=1, column=0, pady=30, padx=10, sticky="e")
+    comp1_button = ctk.CTkButton(master=compartment_frame, text="1", width=200, height=75, font=("Roboto", 30), corner_radius=0, fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "1"))
+    comp1_button.grid(row=1, column=0, pady=(30, 10), padx=10, sticky="e")
 
-    comp2_button = ctk.CTkButton(master=compartment_frame, text="2", width=200, height=50, font=("Roboto", 20), fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "2"))
-    comp2_button.grid(row=2, column=0, pady=30, padx=10, sticky="e")
+    comp2_button = ctk.CTkButton(master=compartment_frame, text="2", width=200, height=75, font=("Roboto", 30), corner_radius=0, fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "2"))
+    comp2_button.grid(row=2, column=0, pady=(0, 10), padx=10, sticky="e")
 
-    comp3_button = ctk.CTkButton(master=compartment_frame, text="3", width=200, height=50, font=("Roboto", 20), fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "3"))
-    comp3_button.grid(row=3, column=0, pady=30, padx=10, sticky="e")
+    comp3_button = ctk.CTkButton(master=compartment_frame, text="3", width=200, height=75, font=("Roboto", 30), corner_radius=0, fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "3"))
+    comp3_button.grid(row=3, column=0, pady=(0, 10), padx=10, sticky="e")
 
     for id, status in compartments_status.items(): 
         if status == "Empty": 
-            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 20), text_color="#E95F5F")
+            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 30), text_color="#E95F5F")
             status_label.grid(row=int(id), column=1, padx=(50, 300), sticky="w")
         if status == "Loaded": 
-            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 20), text_color="#8DF074")
+            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 30), text_color="#8DF074")
             status_label.grid(row=int(id), column=1, padx=(50, 300), sticky="w")
 
     submit_button = ctk.CTkButton(master=compartment_frame, text="Submit", width=200, height=50, font=("Roboto", 20), command=lambda: setting_off(compartment_frame))
@@ -70,7 +82,7 @@ def load_compartment(id):
 
     compartments_status[id] = "Loaded"
     
-    submit_button = ctk.CTkButton(master=compartment_frame, text="Done", width=200, height=50, font=("Roboto", 20), command=lambda: go_to_choose_compartment(compartment_frame, "load", "0000"))
+    submit_button = ctk.CTkButton(master=compartment_frame, text="Done", width=200, height=50, font=("Roboto", 20), command=lambda: go_to_choose_compartment(compartment_frame))
     submit_button.grid(row=4, column=0, pady=30, padx=10)
 
 def set_off(): 
@@ -80,61 +92,55 @@ def set_off():
     label = ctk.CTkLabel(master=omw_frame, text="On my way to the hungry little patients!", font=("Roboto", 40))
     label.pack(pady=30, padx=10, fill="x", expand=True)
 
+    login_button = ctk.CTkButton(master=omw_frame, text="Login", font=("Roboto", 20), command=lambda: go_to_auth_page(omw_frame))
+    login_button.pack(side="bottom", pady=10, padx=10)
+
+    compartment_button = ctk.CTkButton(master=omw_frame, text="Select Compartments", font=("Roboto", 20), command=lambda: go_to_choose_compartment(omw_frame))
+    compartment_button.pack(side="bottom", pady=10, padx=10)
+
 # ======================== BUTTON COMMANDS ========================
 
 def make_combination(num): 
+    global auth 
     auth += num
 
-def go_to_choose_compartment(frame, from_page, text_box): 
-    if from_page == "login": 
-        input_pass = text_box.get()
-        if input_pass == "0000": 
-            frame.pack_forget()
-            choose_compartment()
-        else:
-            warn = ctk.CTkLabel(master=frame, text="Wrong password. Try again.", font=("Roboto", 20))
-            warn.pack(pady=10, padx=10)
-    else: 
+def go_to_choose_compartment(frame): 
+    global auth, unlock_combination
+    if auth == unlock_combination: 
         frame.pack_forget()
         choose_compartment()
-
+    else:
+        warn = ctk.CTkLabel(master=frame, text="Wrong password. Try again.", font=("Roboto", 20))
+        warn.grid(row=5, column=0, columnspan=3, pady=10, padx=10)
+        auth = ""
 
 def go_to_load_compartment(frame, id):
+    rc.turn_on_led(id)
+    rc.unlock_compartment(id)
     frame.pack_forget()
     load_compartment(id)
     print("Load compartment page")
-
-def back_to_choose_compartment(frame, id, status): 
-    frame.pack_forget() 
-    choose_compartment()
-
-def compartment_button(frame, button, id): 
-    # turn on LED 
-    # load 
-    # while unlocked: 
-    #     display "Please close compartment" message 
-    
-    #unclock compartment 
-    # while 1: # while unlocked
-        # open box icon
-        print("button clicked!")
-        button.configure(state="disabled")
-        # break
-
-        # "Place load in compartment" + cancel 
-        # if locked
-            # closed box icon 
-        # if cancel 
-            # remove open box icon
-            # exit loop
 
 def setting_off(frame):
     frame.pack_forget()
     set_off()
     return 
 
+def go_to_auth_page(frame): 
+    global auth 
+    auth = ""
+    frame.pack_forget()
+    start_page()
+
 
 # ======================== SETUP AND MAIN ========================
+auth = ""
+unlock_combination = "00"
+
+compartments_status = dict()
+compartments_status["1"] = "Empty"
+compartments_status["2"] = "Empty"
+compartments_status["3"] = "Empty"
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
