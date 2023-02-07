@@ -1,0 +1,314 @@
+[0.389s] Invoking command in '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs
+[7.486s] -- The C compiler identification is GNU 9.4.0
+[7.488s] -- The CXX compiler identification is GNU 9.4.0
+[7.489s] -- Check for working C compiler: /usr/bin/cc
+[7.491s] -- Check for working C compiler: /usr/bin/cc -- works
+[7.495s] -- Detecting C compiler ABI info
+[7.497s] -- Detecting C compiler ABI info - done
+[7.497s] -- Detecting C compile features
+[7.499s] -- Detecting C compile features - done
+[7.500s] -- Check for working CXX compiler: /usr/bin/c++
+[7.501s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[7.507s] -- Detecting CXX compiler ABI info
+[7.508s] -- Detecting CXX compiler ABI info - done
+[7.509s] -- Detecting CXX compile features
+[7.509s] -- Detecting CXX compile features - done
+[7.510s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[7.510s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[7.514s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[7.516s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[7.518s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.518s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[7.519s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[7.519s] -- Found FastRTPS: /opt/ros/foxy/include  
+[7.520s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.520s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[7.521s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[7.521s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[8.919s] -- Found ament_cmake_cppcheck: 0.9.7 (/opt/ros/foxy/share/ament_cmake_cppcheck/cmake)
+[8.938s] -- Found ament_cmake_cpplint: 0.9.7 (/opt/ros/foxy/share/ament_cmake_cpplint/cmake)
+[8.964s] -- Found ament_cmake_uncrustify: 0.9.7 (/opt/ros/foxy/share/ament_cmake_uncrustify/cmake)
+[8.982s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[10.961s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[11.929s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[12.247s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[12.272s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[12.777s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[12.778s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[12.778s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[12.779s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[13.175s] -- Found PythonExtra: .so  
+[18.378s] -- Found ament_cmake_flake8: 0.9.7 (/opt/ros/foxy/share/ament_cmake_flake8/cmake)
+[18.399s] -- Found ament_cmake_pep257: 0.9.7 (/opt/ros/foxy/share/ament_cmake_pep257/cmake)
+[18.542s] -- Configuring done
+[19.206s] -- Generating done
+[19.279s] -- Build files have been written to: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs
+[19.472s] Invoked command in '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs
+[19.477s] Invoking command in '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs -- -j4 -l4
+[20.349s] [35m[1mScanning dependencies of target realsense2_camera_msgs__cpp[0m
+[20.394s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[20.495s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[28.001s] [  3%] Built target realsense2_camera_msgs__cpp
+[28.159s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[28.441s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[28.547s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_generator_c[0m
+[28.827s] [  9%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/imu_info__functions.c.o[0m
+[30.631s] [ 10%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/extrinsics__functions.c.o[0m
+[31.297s] [ 12%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/metadata__functions.c.o[0m
+[31.887s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_cpp[0m
+[31.970s] [ 14%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/srv/detail/device_info__functions.c.o[0m
+[32.046s] [ 16%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/imu_info__type_support.cpp.o[0m
+[32.475s] [ 18%] [32m[1mLinking C shared library librealsense2_camera_msgs__rosidl_generator_c.so[0m
+[33.033s] [ 18%] Built target realsense2_camera_msgs__rosidl_generator_c
+[33.184s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[33.537s] [ 20%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/imu_info__type_support.cpp.o[0m
+[34.618s] [ 21%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/extrinsics__type_support.cpp.o[0m
+[35.879s] [ 23%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/extrinsics__type_support.cpp.o[0m
+[36.207s] [ 25%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/metadata__type_support.cpp.o[0m
+[37.710s] [ 27%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/srv/device_info__type_support.cpp.o[0m
+[37.978s] [ 29%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/metadata__type_support.cpp.o[0m
+[39.063s] [ 30%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_cpp.so[0m
+[39.223s] [ 30%] Built target realsense2_camera_msgs__rosidl_typesupport_cpp
+[39.955s] [ 32%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/srv/detail/dds_fastrtps/device_info__type_support.cpp.o[0m
+[41.975s] [ 34%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[42.376s] [ 34%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp
+[42.419s] [ 36%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[44.033s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_c[0m
+[44.092s] [ 38%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/imu_info__type_support.cpp.o[0m
+[44.215s] [ 40%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/extrinsics__type_support.cpp.o[0m
+[44.335s] [ 41%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/metadata__type_support.cpp.o[0m
+[44.467s] [ 43%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/srv/device_info__type_support.cpp.o[0m
+[44.598s] [ 45%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_c.so[0m
+[44.743s] [ 45%] Built target realsense2_camera_msgs__rosidl_typesupport_c
+[44.793s] [ 49%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[44.794s] [ 49%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[46.739s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_introspection_c[0m
+[46.818s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c[0m
+[46.835s] [ 50%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/imu_info__type_support.c.o[0m
+[46.839s] [ 52%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/extrinsics__type_support.c.o[0m
+[46.953s] [ 54%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/imu_info__type_support_c.cpp.o[0m
+[47.014s] [ 56%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/metadata__type_support.c.o[0m
+[47.017s] [ 58%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/extrinsics__type_support_c.cpp.o[0m
+[47.178s] [ 60%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/srv/detail/device_info__type_support.c.o[0m
+[47.344s] [ 61%] [32m[1mLinking C shared library librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so[0m
+[47.489s] [ 61%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c
+[47.574s] [ 63%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[48.927s] [ 65%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/srv/detail/device_info__type_support_c.cpp.o[0m
+[49.760s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_introspection_cpp[0m
+[49.828s] [ 67%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/imu_info__type_support.cpp.o[0m
+[50.739s] [ 69%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/metadata__type_support_c.cpp.o[0m
+[51.317s] [ 70%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/metadata__type_support.cpp.o[0m
+[52.578s] [ 72%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[52.891s] [ 74%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/extrinsics__type_support.cpp.o[0m
+[52.911s] [ 76%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/srv/detail/device_info__type_support.cpp.o[0m
+[52.997s] [ 76%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c
+[54.417s] [ 78%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[54.714s] [ 78%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_cpp
+[54.752s] [35m[1mScanning dependencies of target realsense2_camera_msgs[0m
+[54.792s] [ 78%] Built target realsense2_camera_msgs
+[54.837s] [35m[1mScanning dependencies of target realsense2_camera_msgs__py[0m
+[54.880s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[59.173s] [ 80%] Built target realsense2_camera_msgs__py
+[59.246s] [35m[1mScanning dependencies of target realsense2_camera_msgs__python[0m
+[59.553s] [ 81%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__python.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_extrinsics_s.c.o[0m
+[59.576s] [ 83%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__python.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_imu_info_s.c.o[0m
+[59.604s] [ 85%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__python.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_metadata_s.c.o[0m
+[60.533s] [ 87%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__python.dir/rosidl_generator_py/realsense2_camera_msgs/srv/_device_info_s.c.o[0m
+[61.285s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/librealsense2_camera_msgs__python.so[0m
+[61.516s] [ 89%] Built target realsense2_camera_msgs__python
+[61.569s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[61.594s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[61.612s] [35m[1mScanning dependencies of target realsense2_camera_msgs__rosidl_typesupport_c__pyext[0m
+[61.743s] [ 90%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[61.769s] [ 92%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[61.798s] [ 94%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[62.306s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[62.396s] [ 98%] [32m[1mLinking CXX shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[62.507s] [100%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[62.601s] [100%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext
+[63.015s] [100%] Built target realsense2_camera_msgs__rosidl_typesupport_c__pyext
+[63.088s] [100%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext
+[63.173s] Invoked command in '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs -- -j4 -l4
+[64.212s] Invoking command in '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs
+[64.273s] -- Install configuration: ""
+[64.278s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/ament_index/resource_index/rosidl_interfaces/realsense2_camera_msgs
+[64.280s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs
+[64.281s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg
+[64.282s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/extrinsics.h
+[64.283s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/rosidl_generator_c__visibility_control.h
+[64.283s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail
+[64.285s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__type_support.h
+[64.286s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__struct.h
+[64.287s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__functions.h
+[64.288s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__functions.h
+[64.289s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__struct.h
+[64.290s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__type_support.h
+[64.291s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__functions.c
+[64.292s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__struct.h
+[64.293s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__functions.c
+[64.294s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__type_support.h
+[64.296s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__functions.h
+[64.305s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__functions.c
+[64.305s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/metadata.h
+[64.310s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/imu_info.h
+[64.310s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv
+[64.311s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail
+[64.313s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__functions.c
+[64.313s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__struct.h
+[64.315s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__type_support.h
+[64.323s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__functions.h
+[64.324s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/device_info.h
+[64.328s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.sh
+[64.329s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.dsv
+[64.332s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so
+[64.335s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so" to ""
+[64.336s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs
+[64.342s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg
+[64.343s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[64.344s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail
+[64.348s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_c.h
+[64.351s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_c.h
+[64.355s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_c.h
+[64.358s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv
+[64.359s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail
+[64.359s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_c.h
+[64.359s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so
+[64.360s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[64.360s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs
+[64.361s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg
+[64.361s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[64.362s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail
+[64.371s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/dds_fastrtps
+[64.373s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_cpp.hpp
+[64.376s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_cpp.hpp
+[64.377s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_cpp.hpp
+[64.377s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv
+[64.382s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail
+[64.383s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/dds_fastrtps
+[64.383s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[64.384s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so
+[64.385s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[64.386s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs
+[64.395s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg
+[64.395s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[64.396s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail
+[64.397s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__type_support.c
+[64.397s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__type_support.c
+[64.398s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_c.h
+[64.403s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_c.h
+[64.405s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_c.h
+[64.406s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__type_support.c
+[64.406s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv
+[64.407s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail
+[64.408s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_c.h
+[64.410s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__type_support.c
+[64.411s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so
+[64.412s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so" to ""
+[64.414s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so
+[64.415s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so" to ""
+[64.417s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs
+[64.418s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg
+[64.433s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/extrinsics.hpp
+[64.454s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail
+[64.460s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__traits.hpp
+[64.461s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__struct.hpp
+[64.465s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__builder.hpp
+[64.469s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__builder.hpp
+[64.471s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__builder.hpp
+[64.474s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__traits.hpp
+[64.476s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__struct.hpp
+[64.479s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__struct.hpp
+[64.481s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__traits.hpp
+[64.484s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/imu_info.hpp
+[64.496s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/metadata.hpp
+[64.503s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv
+[64.504s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail
+[64.505s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__struct.hpp
+[64.506s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__traits.hpp
+[64.508s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__builder.hpp
+[64.509s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/device_info.hpp
+[64.511s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs
+[64.516s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg
+[64.520s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail
+[64.521s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__type_support.cpp
+[64.528s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_cpp.hpp
+[64.529s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_cpp.hpp
+[64.536s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_cpp.hpp
+[64.540s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/extrinsics__type_support.cpp
+[64.541s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/msg/detail/imu_info__type_support.cpp
+[64.543s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv
+[64.544s] -- Up-to-date: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail
+[64.544s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__type_support.cpp
+[64.545s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/include/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_cpp.hpp
+[64.550s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so
+[64.551s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[64.551s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so
+[64.552s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so" to ""
+[64.556s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.sh
+[64.559s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.dsv
+[64.562s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/__init__.py
+[64.739s] Compiling '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/__init__.py'...
+[64.767s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg
+[64.768s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/_extrinsics.py
+[64.769s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/_imu_info_s.c
+[64.770s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/__init__.py
+[64.770s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/_imu_info.py
+[64.771s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/_metadata_s.c
+[64.773s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/_extrinsics_s.c
+[64.774s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/msg/_metadata.py
+[64.775s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/srv
+[64.779s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/srv/_device_info.py
+[64.780s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/srv/__init__.py
+[64.781s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/srv/_device_info_s.c
+[64.784s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[64.785s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[64.786s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[64.788s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[64.789s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[64.791s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[64.792s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__python.so
+[64.793s] -- Set runtime path of "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__python.so" to ""
+[64.794s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.idl
+[64.794s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.idl
+[64.795s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.idl
+[64.796s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.idl
+[64.798s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.msg
+[64.799s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.msg
+[64.801s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.msg
+[64.802s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.srv
+[64.803s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Request.msg
+[64.810s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Response.msg
+[64.812s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/ament_index/resource_index/package_run_dependencies/realsense2_camera_msgs
+[64.813s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/ament_index/resource_index/parent_prefix_path/realsense2_camera_msgs
+[64.817s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.sh
+[64.819s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.dsv
+[64.820s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.sh
+[64.821s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.dsv
+[64.822s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.bash
+[64.823s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.sh
+[64.824s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.zsh
+[64.825s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.dsv
+[64.826s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv
+[64.827s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/ament_index/resource_index/packages/realsense2_camera_msgs
+[64.828s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_generator_cExport.cmake
+[64.829s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_generator_cExport-noconfig.cmake
+[64.831s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport.cmake
+[64.833s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[64.835s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport.cmake
+[64.837s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[64.839s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_generator_cppExport.cmake
+[64.844s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[64.845s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[64.846s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport.cmake
+[64.847s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[64.849s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake-extras.cmake
+[64.851s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[64.852s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[64.853s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[64.855s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[64.856s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[64.858s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[64.859s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig.cmake
+[64.860s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig-version.cmake
+[64.861s] -- Installing: /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.xml
+[64.894s] Invoked command in '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/realsense2_camera_msgs

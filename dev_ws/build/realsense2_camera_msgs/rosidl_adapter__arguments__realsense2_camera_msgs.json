@@ -1,0 +1,9 @@
+{
+  "package_name": "realsense2_camera_msgs",
+  "non_idl_tuples": [
+    "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/src/realsense-ros/realsense2_camera_msgs:msg/IMUInfo.msg",
+    "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/src/realsense-ros/realsense2_camera_msgs:msg/Extrinsics.msg",
+    "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/src/realsense-ros/realsense2_camera_msgs:msg/Metadata.msg",
+    "/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/src/realsense-ros/realsense2_camera_msgs:srv/DeviceInfo.srv"
+  ]
+}

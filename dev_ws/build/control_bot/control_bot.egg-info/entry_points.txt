@@ -1,0 +1,2 @@
+[console_scripts]
+driver = control_bot.driver:main

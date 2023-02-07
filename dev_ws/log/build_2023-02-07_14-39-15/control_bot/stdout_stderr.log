@@ -1,0 +1,45 @@
+/usr/local/lib/python3.8/dist-packages/setuptools/dist.py:770: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+creating ../../build/control_bot/control_bot.egg-info
+writing ../../build/control_bot/control_bot.egg-info/PKG-INFO
+writing dependency_links to ../../build/control_bot/control_bot.egg-info/dependency_links.txt
+writing entry points to ../../build/control_bot/control_bot.egg-info/entry_points.txt
+writing requirements to ../../build/control_bot/control_bot.egg-info/requires.txt
+writing top-level names to ../../build/control_bot/control_bot.egg-info/top_level.txt
+writing manifest file '../../build/control_bot/control_bot.egg-info/SOURCES.txt'
+reading manifest file '../../build/control_bot/control_bot.egg-info/SOURCES.txt'
+writing manifest file '../../build/control_bot/control_bot.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot
+copying control_bot/__init__.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot
+copying control_bot/driver.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot
+copying control_bot/driver1.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot
+copying control_bot/driver3.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot
+running install
+/usr/local/lib/python3.8/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot
+copying /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot/__init__.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot
+copying /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot/driver.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot
+copying /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot/driver1.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot
+copying /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/build/lib/control_bot/driver3.py -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot
+byte-compiling /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot/driver.py to driver.cpython-38.pyc
+byte-compiling /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot/driver1.py to driver1.cpython-38.pyc
+byte-compiling /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot/driver3.py to driver3.cpython-38.pyc
+running install_data
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/share/ament_index
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/share/ament_index/resource_index
+creating /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/share/ament_index/resource_index/packages
+copying resource/control_bot -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/share/ament_index/resource_index/packages
+copying package.xml -> /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/share/control_bot
+running install_egg_info
+Copying ../../build/control_bot/control_bot.egg-info to /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/python3.8/site-packages/control_bot-0.0.0-py3.8.egg-info
+running install_scripts
+Installing driver script to /home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/install/control_bot/lib/control_bot
+writing list of installed files to '/home/team5/Desktop/ELEC490_CAPSTONE_team5/dev_ws/build/control_bot/install.log'
