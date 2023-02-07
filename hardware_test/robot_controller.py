@@ -389,28 +389,28 @@ GPIO.add_event_detect(BUT_3, GPIO.RISING, callback=button3, bouncetime=1)
 
 # ===================== main =====================
 
-killAllLED()
-# killAllServo()
+# killAllLED()
+# # killAllServo()
 
-while 1:
-    print("which component would you like to test?")
-    choice = input("1: LEDS\n2: Locking\n3: Motors\nq: quit\n")
+# while 1:
+#     print("which component would you like to test?")
+#     choice = input("1: LEDS\n2: Locking\n3: Motors\nq: quit\n")
 
-    if choice == '1':
-        testLED()
-    elif choice == '2':
-        testLocking()
-    elif choice == '3':
-        testPWM()
-    elif choice == 'q':
-        break
-    else:
-        print("incorrect input")
+#     if choice == '1':
+#         testLED()
+#     elif choice == '2':
+#         testLocking()
+#     elif choice == '3':
+#         testPWM()
+#     elif choice == 'q':
+#         break
+#     else:
+#         print("incorrect input")
     
     
-pwm1.stop()     # stop PWM1
-pwm2.stop()     # stop PWM1
+# pwm1.stop()     # stop PWM1
+# pwm2.stop()     # stop PWM1
 
-killAllLED()    # turn off LEDs
+# killAllLED()    # turn off LEDs
 
 GPIO.cleanup()
