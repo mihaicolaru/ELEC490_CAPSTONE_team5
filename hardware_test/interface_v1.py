@@ -113,43 +113,55 @@ def testLocking():
             print("invalid input")
 
 def testPWM():
-    dc=0                               # set dc variable to 0 for 0%
-    
-    pwm1.start(dc)                      # Start PWM with 0% duty cycle
-    pwm2.start(dc)                      # Start PWM with 0% duty cycle
-
     while 1:
         # set direction for each motor
         direction = input("select direction:\n1 - forward\n2 - backward\n3 - turn right\n4 - turn left\nk - kill pwm\nq - quit\n")
+        dc=0                               # set dc variable to 0 for 0%
 
         if direction == '1':
-            GPIO.output(IN_A, GPIO.LOW)
-            GPIO.output(IN_B, GPIO.HIGH)
-            GPIO.output(IN_C, GPIO.HIGH)
-            GPIO.output(IN_D, GPIO.LOW)
+            # GPIO.output(IN_A, GPIO.HIGH)
+            # GPIO.output(IN_B, GPIO.LOW)
+            # GPIO.output(IN_C, GPIO.LOW)
+            # GPIO.output(IN_D, GPIO.HIGH)
 
             speed = input("forward - select speed:\n1 - slow\n2 - cruise\n3 - max\nq - quit\n")
             if speed == ' 1':
-                dc = 20
+                dc = 10
             elif speed == '2':
-                dc = 50
+                dc = 30
             elif speed == '3':
-                dc = 80
+                dc = 50
             elif speed == 'q':
                 dc = 0            
 
             input("start test?")
 
+            GPIO.output(IN_A, GPIO.HIGH)
+            GPIO.output(IN_B, GPIO.LOW)
+            GPIO.output(IN_C, GPIO.LOW)
+            GPIO.output(IN_D, GPIO.HIGH)
+
+            pwm1.start(0)                      # Start PWM with 0% duty cycle
+            pwm2.start(0)                      # Start PWM with 0% duty cycle
+
             print(f'sending {dc} to motors 1 and 2')
-            pwm1.ChangeDutyCycle(dc)
-            pwm2.ChangeDutyCycle(dc)
+            pwm1.ChangeDutyCycle(0)
+            pwm2.ChangeDutyCycle(0)
             
             input("press enter to stop")
 
             print("stopping motors")
+            GPIO.output(IN_A, GPIO.LOW)
+            GPIO.output(IN_B, GPIO.LOW)
+            GPIO.output(IN_C, GPIO.LOW)
+            GPIO.output(IN_D, GPIO.LOW)
+
             dc = 0
             pwm1.ChangeDutyCycle(dc)
             pwm2.ChangeDutyCycle(dc)
+
+            pwm1.stop()
+            pwm2.stop()
 
         elif direction == '2':
             GPIO.output(IN_A, GPIO.HIGH)
