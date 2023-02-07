@@ -54,7 +54,7 @@ def turn_on_led(compartment):
     else:
         print("turning off all LEDs")
         killAllLED()
-
+    
 def turn_off_led(compartment):
     if compartment == '1':
         print("turning on LED 1")
@@ -77,6 +77,44 @@ def turn_off_led(compartment):
     else:
         print("turning off all LEDs")
         killAllLED()
+
+def unlock_compartment(compartment): 
+    if compartment == '1':
+        print("locking compartment 1")
+
+        kit.servo[SERV_1].angle = 180
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_1].angle = 180
+            
+    elif compartment == '2':
+        print("locking compartment 2")
+
+        kit.servo[SERV_2].angle = 180
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_2].angle = 180
+        
+    elif compartment == '3':
+        print("locking compartment 3")
+
+        kit.servo[SERV_3].angle = 180
+
+        # time.sleep(2)
+
+        # print("unlocking compartment 1")
+
+        # kit.servo[SERV_3].angle = 180
+
+    else:
+        print("unlocking all")
+        killAllServo()
 
 def lock_compartment(compartment): 
     if compartment == '1':
