@@ -2,7 +2,7 @@ import customtkinter as ctk
 from tkinter import Tk, Frame, Canvas
 from PIL import ImageTk, Image  
 import time
-import robot_controller as rc
+# import robot_controller as rc
 
 def start_page():
     auth_frame = ctk.CTkFrame(master=root)
@@ -115,8 +115,8 @@ def go_to_choose_compartment(frame):
         auth = ""
 
 def go_to_load_compartment(frame, id):
-    rc.turn_on_led(id)
-    rc.unlock_compartment(id)
+    # rc.turn_on_led(id)
+    # rc.unlock_compartment(id)
     frame.pack_forget()
     load_compartment(id)
     print("Load compartment page")
