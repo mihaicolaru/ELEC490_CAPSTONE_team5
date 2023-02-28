@@ -1,1 +1,1 @@
-RPi.GPIO:geometry_msgs:rclpy:std_msgs
+geometry_msgs:rclpy:std_msgs

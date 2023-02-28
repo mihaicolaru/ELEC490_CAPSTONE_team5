@@ -1,6 +1,0 @@
-source;share/IMUsubscriber/hook/pythonpath.ps1
-source;share/IMUsubscriber/hook/pythonpath.dsv
-source;share/IMUsubscriber/hook/pythonpath.sh
-source;share/IMUsubscriber/hook/ament_prefix_path.ps1
-source;share/IMUsubscriber/hook/ament_prefix_path.dsv
-source;share/IMUsubscriber/hook/ament_prefix_path.sh
