@@ -4,3 +4,5 @@
 /dev_ws/.vscode
 
 /hardware_test/__pycache__/
+dev_ws/src/my_bot
+dev_ws/src/ros2_control_demos
