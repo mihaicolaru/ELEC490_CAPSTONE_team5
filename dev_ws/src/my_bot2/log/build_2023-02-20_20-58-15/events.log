@@ -1,0 +1,129 @@
+[0.000000] (-) TimerEvent: {}
+[0.005754] (my_bot) JobQueued: {'identifier': 'my_bot', 'dependencies': OrderedDict()}
+[0.006507] (my_bot) JobStarted: {'identifier': 'my_bot'}
+[0.109035] (-) TimerEvent: {}
+[0.117107] (my_bot) JobProgress: {'identifier': 'my_bot', 'progress': 'cmake'}
+[0.131608] (my_bot) Command: {'cmd': ['/usr/local/bin/cmake', '/home/abh2303/Desktop/dev_ws/src/my_bot', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot'], 'cwd': '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abh2303'), ('SSH_AGENT_PID', '1115'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/abh2303'), ('OLDPWD', '/home/abh2303/Desktop/dev_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '846'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'abh2303'), ('JOURNAL_STREAM', '8:32003'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abh2303'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/abh2303/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu-Foxy-20:@/tmp/.ICE-unix/1152,unix/Ubuntu-Foxy-20:/tmp/.ICE-unix/1152'), ('INVOCATION_ID', '9e79346086b1435ebbb3ec079ea05d26'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c6d32a47_ca4c_4ece_aad2_4a924922fd2d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.113'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/my_bot:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/abh2303/Desktop/dev_ws/build/tempIMU:/home/abh2303/Desktop/dev_ws/install/tempIMU/lib/python3.8/site-packages:/home/abh2303/Desktop/dev_ws/build/py_pubsub:/home/abh2303/Desktop/dev_ws/install/py_pubsub/lib/python3.8/site-packages:/home/abh2303/Desktop/dev_ws/build/control_bot:/home/abh2303/Desktop/dev_ws/install/control_bot/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install/my_bot:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy')]), 'shell': False}
+[0.211992] (-) TimerEvent: {}
+[0.325505] (-) TimerEvent: {}
+[0.427803] (-) TimerEvent: {}
+[0.533098] (-) TimerEvent: {}
+[0.637527] (-) TimerEvent: {}
+[0.738593] (-) TimerEvent: {}
+[0.840897] (-) TimerEvent: {}
+[0.943711] (-) TimerEvent: {}
+[1.051812] (-) TimerEvent: {}
+[1.152935] (-) TimerEvent: {}
+[1.253726] (-) TimerEvent: {}
+[1.355376] (-) TimerEvent: {}
+[1.460725] (-) TimerEvent: {}
+[1.563174] (-) TimerEvent: {}
+[1.587494] (my_bot) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.663913] (-) TimerEvent: {}
+[1.764776] (-) TimerEvent: {}
+[1.865511] (-) TimerEvent: {}
+[1.968510] (-) TimerEvent: {}
+[2.069598] (-) TimerEvent: {}
+[2.170608] (-) TimerEvent: {}
+[2.271643] (-) TimerEvent: {}
+[2.372730] (-) TimerEvent: {}
+[2.396511] (my_bot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.473717] (-) TimerEvent: {}
+[2.541494] (my_bot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.574319] (-) TimerEvent: {}
+[2.676935] (-) TimerEvent: {}
+[2.778177] (-) TimerEvent: {}
+[2.884159] (-) TimerEvent: {}
+[2.898806] (my_bot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.918874] (my_bot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.929166] (my_bot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.931993] (my_bot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.950779] (my_bot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.984925] (-) TimerEvent: {}
+[3.087069] (-) TimerEvent: {}
+[3.171713] (my_bot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.193107] (my_bot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.193605] (-) TimerEvent: {}
+[3.194101] (my_bot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.194369] (my_bot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.298000] (-) TimerEvent: {}
+[3.310671] (my_bot) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[3.438057] (-) TimerEvent: {}
+[3.448014] (my_bot) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.448800] (my_bot) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.538782] (-) TimerEvent: {}
+[3.643533] (-) TimerEvent: {}
+[3.745196] (-) TimerEvent: {}
+[3.845889] (-) TimerEvent: {}
+[3.947151] (-) TimerEvent: {}
+[4.036108] (my_bot) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.047895] (-) TimerEvent: {}
+[4.152150] (-) TimerEvent: {}
+[4.252752] (-) TimerEvent: {}
+[4.269958] (my_bot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[4.353252] (-) TimerEvent: {}
+[4.473246] (-) TimerEvent: {}
+[4.574577] (-) TimerEvent: {}
+[4.640890] (my_bot) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.685951] (-) TimerEvent: {}
+[4.745364] (my_bot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.745913] (my_bot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[4.746162] (my_bot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.761194] (my_bot) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[4.761584] (my_bot) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[4.773405] (my_bot) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[4.785953] (my_bot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.786280] (-) TimerEvent: {}
+[4.795551] (my_bot) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[4.812889] (my_bot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.823687] (my_bot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.829291] (my_bot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.852444] (my_bot) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.864586] (my_bot) StdoutLine: {'line': b'-- Generating done\n'}
+[4.866201] (my_bot) StdoutLine: {'line': b'-- Build files have been written to: /home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot\n'}
+[4.901373] (my_bot) CommandEnded: {'returncode': 0}
+[4.903065] (-) TimerEvent: {}
+[4.903479] (my_bot) JobProgress: {'identifier': 'my_bot', 'progress': 'build'}
+[4.903532] (my_bot) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot', '--', '-j4', '-l4'], 'cwd': '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abh2303'), ('SSH_AGENT_PID', '1115'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/abh2303'), ('OLDPWD', '/home/abh2303/Desktop/dev_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '846'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'abh2303'), ('JOURNAL_STREAM', '8:32003'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abh2303'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/abh2303/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu-Foxy-20:@/tmp/.ICE-unix/1152,unix/Ubuntu-Foxy-20:/tmp/.ICE-unix/1152'), ('INVOCATION_ID', '9e79346086b1435ebbb3ec079ea05d26'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c6d32a47_ca4c_4ece_aad2_4a924922fd2d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.113'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/my_bot:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/abh2303/Desktop/dev_ws/build/tempIMU:/home/abh2303/Desktop/dev_ws/install/tempIMU/lib/python3.8/site-packages:/home/abh2303/Desktop/dev_ws/build/py_pubsub:/home/abh2303/Desktop/dev_ws/install/py_pubsub/lib/python3.8/site-packages:/home/abh2303/Desktop/dev_ws/build/control_bot:/home/abh2303/Desktop/dev_ws/install/control_bot/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install/my_bot:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy')]), 'shell': False}
+[5.003292] (-) TimerEvent: {}
+[5.019233] (my_bot) CommandEnded: {'returncode': 0}
+[5.109423] (-) TimerEvent: {}
+[5.119123] (my_bot) JobProgress: {'identifier': 'my_bot', 'progress': 'install'}
+[5.150675] (my_bot) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot'], 'cwd': '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abh2303'), ('SSH_AGENT_PID', '1115'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/abh2303'), ('OLDPWD', '/home/abh2303/Desktop/dev_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '846'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'abh2303'), ('JOURNAL_STREAM', '8:32003'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abh2303'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/abh2303/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu-Foxy-20:@/tmp/.ICE-unix/1152,unix/Ubuntu-Foxy-20:/tmp/.ICE-unix/1152'), ('INVOCATION_ID', '9e79346086b1435ebbb3ec079ea05d26'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c6d32a47_ca4c_4ece_aad2_4a924922fd2d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.113'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/my_bot:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/abh2303/Desktop/dev_ws/build/tempIMU:/home/abh2303/Desktop/dev_ws/install/tempIMU/lib/python3.8/site-packages:/home/abh2303/Desktop/dev_ws/build/py_pubsub:/home/abh2303/Desktop/dev_ws/install/py_pubsub/lib/python3.8/site-packages:/home/abh2303/Desktop/dev_ws/build/control_bot:/home/abh2303/Desktop/dev_ws/install/control_bot/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/abh2303/Desktop/dev_ws/install/my_bot:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy')]), 'shell': False}
+[5.175511] (my_bot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.177643] (my_bot) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.188244] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/drive_bot.rviz\n'}
+[5.202438] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/empty.yaml\n'}
+[5.209544] (-) TimerEvent: {}
+[5.211070] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/view_bot.rviz\n'}
+[5.228180] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/gazebo_control.xacro\n'}
+[5.235326] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/inertial_macros.xacro\n'}
+[5.250454] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/robot.urdf.xacro\n'}
+[5.272660] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/robot_core.xacro\n'}
+[5.281278] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/launch/launch_sim.launch.py\n'}
+[5.289919] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/launch/rsp.launch.py\n'}
+[5.298735] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/worlds/empty.world\n'}
+[5.307572] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/worlds/test.world\n'}
+[5.310686] (-) TimerEvent: {}
+[5.319319] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot\n'}
+[5.325815] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot\n'}
+[5.340592] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.sh\n'}
+[5.360982] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv\n'}
+[5.376788] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.sh\n'}
+[5.391173] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.dsv\n'}
+[5.408690] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.bash\n'}
+[5.414002] (-) TimerEvent: {}
+[5.424004] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.sh\n'}
+[5.433251] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.zsh\n'}
+[5.443075] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.dsv\n'}
+[5.460913] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/package.dsv\n'}
+[5.479238] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/packages/my_bot\n'}
+[5.508915] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig.cmake\n'}
+[5.515321] (-) TimerEvent: {}
+[5.528534] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake\n'}
+[5.554321] (my_bot) CommandEnded: {'returncode': -2}
+[5.616544] (-) TimerEvent: {}
+[5.719586] (-) TimerEvent: {}
+[5.813518] (my_bot) JobEnded: {'identifier': 'my_bot', 'rc': 'SIGINT'}
+[5.821927] (-) TimerEvent: {}
+[5.836364] (-) EventReactorShutdown: {}

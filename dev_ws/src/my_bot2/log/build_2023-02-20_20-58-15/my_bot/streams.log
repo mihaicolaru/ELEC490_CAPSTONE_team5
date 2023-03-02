@@ -1,0 +1,65 @@
+[0.166s] Invoking command in '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy /usr/local/bin/cmake /home/abh2303/Desktop/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot
+[1.582s] -- The C compiler identification is GNU 9.4.0
+[2.391s] -- The CXX compiler identification is GNU 9.4.0
+[2.535s] -- Detecting C compiler ABI info
+[2.892s] -- Detecting C compiler ABI info - done
+[2.913s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.923s] -- Detecting C compile features
+[2.926s] -- Detecting C compile features - done
+[2.945s] -- Detecting CXX compiler ABI info
+[3.165s] -- Detecting CXX compiler ABI info - done
+[3.187s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.188s] -- Detecting CXX compile features
+[3.188s] -- Detecting CXX compile features - done
+[3.304s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[3.442s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.442s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.030s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.264s] -- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.635s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.739s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.739s] -- Configured cppcheck include dirs: 
+[4.740s] -- Configured cppcheck exclude dirs and/or files: 
+[4.755s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.755s] -- Configured cpplint exclude dirs and/or files: 
+[4.767s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.780s] -- Added test 'lint_cmake' to check CMake code style
+[4.789s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[4.817s] -- Added test 'uncrustify' to check C / C++ code style
+[4.817s] -- Configured uncrustify additional arguments: 
+[4.823s] -- Added test 'xmllint' to check XML markup files
+[4.846s] -- Configuring done
+[4.858s] -- Generating done
+[4.860s] -- Build files have been written to: /home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot
+[4.895s] Invoked command in '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy /usr/local/bin/cmake /home/abh2303/Desktop/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot
+[4.897s] Invoking command in '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy /usr/local/bin/cmake --build /home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot -- -j4 -l4
+[5.014s] Invoked command in '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy /usr/local/bin/cmake --build /home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot -- -j4 -l4
+[5.147s] Invoking command in '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy /usr/local/bin/cmake --install /home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot
+[5.169s] -- Install configuration: ""
+[5.171s] -- Execute custom install script
+[5.182s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/drive_bot.rviz
+[5.196s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/empty.yaml
+[5.205s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/config/view_bot.rviz
+[5.222s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/gazebo_control.xacro
+[5.229s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/inertial_macros.xacro
+[5.245s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[5.266s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/description/robot_core.xacro
+[5.275s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/launch/launch_sim.launch.py
+[5.284s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/launch/rsp.launch.py
+[5.292s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/worlds/empty.world
+[5.301s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/worlds/test.world
+[5.313s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[5.320s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[5.336s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[5.355s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[5.371s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.sh
+[5.385s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.dsv
+[5.404s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.bash
+[5.418s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.sh
+[5.427s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.zsh
+[5.437s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.dsv
+[5.455s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/package.dsv
+[5.474s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[5.503s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[5.522s] -- Symlinking: /home/abh2303/Desktop/dev_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[5.549s] Invoked command in '/home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abh2303/Desktop/dev_ws/install/tempIMU:/home/abh2303/Desktop/dev_ws/install/py_pubsub:/home/abh2303/Desktop/dev_ws/install/control_bot:/opt/ros/foxy /usr/local/bin/cmake --install /home/abh2303/Desktop/dev_ws/src/my_bot/build/my_bot
