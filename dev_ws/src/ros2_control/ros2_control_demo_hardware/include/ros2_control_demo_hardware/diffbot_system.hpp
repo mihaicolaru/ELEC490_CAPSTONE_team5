@@ -30,7 +30,7 @@
 #include "std_msgs/msg/string.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
-#include "rclcpp_lifecycle/state.hpp"
+// #include "rclcpp_lifecycle/state.hpp"
 
 #include <geometry_msgs/msg/twist.hpp>
 
@@ -57,8 +57,8 @@ public:
   ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
   hardware_interface::return_type configure(const hardware_interface::HardwareInfo & info) override;
 
-  ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
-  std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
+  // ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
+  // std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
 
   ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
   std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
@@ -69,8 +69,8 @@ public:
   ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
   hardware_interface::return_type stop() override;
 
-  ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
-  hardware_interface::return_type read() override;
+  // ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
+  // hardware_interface::return_type read() override;
 
   ROS2_CONTROL_DEMO_HARDWARE_PUBLIC
   hardware_interface::return_type write() override;
@@ -84,8 +84,8 @@ private:
 
   // Store the command for the simulated robot
   std::vector<double> hw_commands_;
-  std::vector<double> hw_positions_;
-  std::vector<double> hw_velocities_;
+  // std::vector<double> hw_positions_;
+  // std::vector<double> hw_velocities_;
 
   // Store the wheeled robot position
   double base_x_, base_y_, base_theta_;

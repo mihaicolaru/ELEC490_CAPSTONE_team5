@@ -58,8 +58,8 @@ hardware_interface::return_type DiffBotSystemHardware::configure(
   hw_start_sec_ = stod(info_.hardware_parameters["example_param_hw_start_duration_sec"]);
   hw_stop_sec_ = stod(info_.hardware_parameters["example_param_hw_stop_duration_sec"]);
 
-  hw_positions_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
-  hw_velocities_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
+  // hw_positions_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
+  // hw_velocities_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
   hw_commands_.resize(info_.joints.size(), std::numeric_limits<double>::quiet_NaN());
 
   for (const hardware_interface::ComponentInfo & joint : info_.joints)
@@ -75,42 +75,42 @@ hardware_interface::return_type DiffBotSystemHardware::configure(
       return hardware_interface::return_type::ERROR;
     }
 
-    if (joint.command_interfaces[0].name != hardware_interface::HW_IF_VELOCITY)
-    {
-      RCLCPP_FATAL(
-        rclcpp::get_logger("DiffBotSystemHardware"),
-        "Joint '%s' have %s command interfaces found. '%s' expected.", joint.name.c_str(),
-        joint.command_interfaces[0].name.c_str(), hardware_interface::HW_IF_VELOCITY);
-      return hardware_interface::return_type::ERROR;
-    }
+    // if (joint.command_interfaces[0].name != hardware_interface::HW_IF_VELOCITY)
+    // {
+    //   RCLCPP_FATAL(
+    //     rclcpp::get_logger("DiffBotSystemHardware"),
+    //     "Joint '%s' have %s command interfaces found. '%s' expected.", joint.name.c_str(),
+    //     joint.command_interfaces[0].name.c_str(), hardware_interface::HW_IF_VELOCITY);
+    //   return hardware_interface::return_type::ERROR;
+    // }
 
-    if (joint.state_interfaces.size() != 2)
-    {
-      RCLCPP_FATAL(
-        rclcpp::get_logger("DiffBotSystemHardware"),
-        "Joint '%s' has %d state interface. 2 expected.", joint.name.c_str(),
-        joint.state_interfaces.size());
-      return hardware_interface::return_type::ERROR;
-    }
+    // if (joint.state_interfaces.size() != 2)
+    // {
+    //   RCLCPP_FATAL(
+    //     rclcpp::get_logger("DiffBotSystemHardware"),
+    //     "Joint '%s' has %d state interface. 2 expected.", joint.name.c_str(),
+    //     joint.state_interfaces.size());
+    //   return hardware_interface::return_type::ERROR;
+    // }
 
-    if (joint.state_interfaces[0].name != hardware_interface::HW_IF_POSITION)
-    {
-      RCLCPP_FATAL(
-        rclcpp::get_logger("DiffBotSystemHardware"),
-        "Joint '%s' have '%s' as first state interface. '%s' and '%s' expected.",
-        joint.name.c_str(), joint.state_interfaces[0].name.c_str(),
-        hardware_interface::HW_IF_POSITION);
-      return hardware_interface::return_type::ERROR;
-    }
+    // if (joint.state_interfaces[0].name != hardware_interface::HW_IF_POSITION)
+    // {
+    //   RCLCPP_FATAL(
+    //     rclcpp::get_logger("DiffBotSystemHardware"),
+    //     "Joint '%s' have '%s' as first state interface. '%s' and '%s' expected.",
+    //     joint.name.c_str(), joint.state_interfaces[0].name.c_str(),
+    //     hardware_interface::HW_IF_POSITION);
+    //   return hardware_interface::return_type::ERROR;
+    // }
 
-    if (joint.state_interfaces[1].name != hardware_interface::HW_IF_VELOCITY)
-    {
-      RCLCPP_FATAL(
-        rclcpp::get_logger("DiffBotSystemHardware"),
-        "Joint '%s' have '%s' as second state interface. '%s' expected.", joint.name.c_str(),
-        joint.state_interfaces[1].name.c_str(), hardware_interface::HW_IF_VELOCITY);
-      return hardware_interface::return_type::ERROR;
-    }
+    // if (joint.state_interfaces[1].name != hardware_interface::HW_IF_VELOCITY)
+    // {
+    //   RCLCPP_FATAL(
+    //     rclcpp::get_logger("DiffBotSystemHardware"),
+    //     "Joint '%s' have '%s' as second state interface. '%s' expected.", joint.name.c_str(),
+    //     joint.state_interfaces[1].name.c_str(), hardware_interface::HW_IF_VELOCITY);
+    //   return hardware_interface::return_type::ERROR;
+    // }
   }
 
 
@@ -119,19 +119,19 @@ hardware_interface::return_type DiffBotSystemHardware::configure(
   return hardware_interface::return_type::OK;
 }
 
-std::vector<hardware_interface::StateInterface> DiffBotSystemHardware::export_state_interfaces()
-{
-  std::vector<hardware_interface::StateInterface> state_interfaces;
-  for (auto i = 0u; i < info_.joints.size(); i++)
-  {
-    state_interfaces.emplace_back(hardware_interface::StateInterface(
-      info_.joints[i].name, hardware_interface::HW_IF_POSITION, &hw_positions_[i]));
-    state_interfaces.emplace_back(hardware_interface::StateInterface(
-      info_.joints[i].name, hardware_interface::HW_IF_VELOCITY, &hw_velocities_[i]));
-  }
+// std::vector<hardware_interface::StateInterface> DiffBotSystemHardware::export_state_interfaces()
+// {
+//   std::vector<hardware_interface::StateInterface> state_interfaces;
+//   for (auto i = 0u; i < info_.joints.size(); i++)
+//   {
+//     state_interfaces.emplace_back(hardware_interface::StateInterface(
+//       info_.joints[i].name, hardware_interface::HW_IF_POSITION, &hw_positions_[i]));
+//     state_interfaces.emplace_back(hardware_interface::StateInterface(
+//       info_.joints[i].name, hardware_interface::HW_IF_VELOCITY, &hw_velocities_[i]));
+//   }
 
-  return state_interfaces;
-}
+//   return state_interfaces;
+// }
 
 std::vector<hardware_interface::CommandInterface> DiffBotSystemHardware::export_command_interfaces()
 {
@@ -157,12 +157,12 @@ hardware_interface::return_type DiffBotSystemHardware::start() // Initiate hardw
   }
 
   // set some default values
-  for (auto i = 0u; i < hw_positions_.size(); i++)
+  for (auto i = 0u; i < hw_commands_.size(); i++)
   {
-    if (std::isnan(hw_positions_[i]))
+    if (std::isnan(hw_commands_[i]))
     {
-      hw_positions_[i] = 0;
-      hw_velocities_[i] = 0;
+      // hw_positions_[i] = 0;
+      // hw_velocities_[i] = 0;
       hw_commands_[i] = 0;
     }
   }
@@ -193,42 +193,42 @@ hardware_interface::return_type DiffBotSystemHardware::stop()
   return hardware_interface::return_type::OK;
 }
 
-hardware_interface::return_type DiffBotSystemHardware::read() // Read the state from the robot hardware.
-{
-  RCLCPP_INFO(rclcpp::get_logger("DiffBotSystemHardware"), "Reading...");
+// hardware_interface::return_type DiffBotSystemHardware::read() // Read the state from the robot hardware.
+// {
+//   RCLCPP_INFO(rclcpp::get_logger("DiffBotSystemHardware"), "Reading...");
 
-  double radius = 0.25;  // radius of the wheels
-  double dist_w = 0.41;   // distance between the wheels
-  double dt = 0.01;      // Control period
-  for (uint i = 0; i < hw_commands_.size(); i++)
-  {
-    // Simulate DiffBot wheels's movement as a first-order system
-    // Update the joint status: this is a revolute joint without any limit.
-    // Simply integrates
-    hw_positions_[i] = hw_positions_[1] + dt * hw_commands_[i];
-    hw_velocities_[i] = hw_commands_[i];
+//   double radius = 0.25;  // radius of the wheels
+//   double dist_w = 0.41;   // distance between the wheels
+//   double dt = 0.01;      // Control period
+//   for (uint i = 0; i < hw_commands_.size(); i++)
+//   {
+//     // Simulate DiffBot wheels's movement as a first-order system
+//     // Update the joint status: this is a revolute joint without any limit.
+//     // Simply integrates
+//     hw_positions_[i] = hw_positions_[1] + dt * hw_commands_[i];
+//     hw_velocities_[i] = hw_commands_[i];
 
-    RCLCPP_INFO(
-      rclcpp::get_logger("DiffBotSystemHardware"),
-      "Got position state %.5f and velocity state %.5f for '%s'!", hw_positions_[i],
-      hw_velocities_[i], info_.joints[i].name.c_str());
-  }
+//     RCLCPP_INFO(
+//       rclcpp::get_logger("DiffBotSystemHardware"),
+//       "Got position state %.5f and velocity state %.5f for '%s'!", hw_positions_[i],
+//       hw_velocities_[i], info_.joints[i].name.c_str());
+//   }
 
-  // Update the free-flyer, i.e. the base notation using the classical
-  // wheel differentiable kinematics
-  double base_dx = 0.5 * radius * (hw_commands_[0] + hw_commands_[1]) * cos(base_theta_);
-  double base_dy = 0.5 * radius * (hw_commands_[0] + hw_commands_[1]) * sin(base_theta_);
-  double base_dtheta = radius * (hw_commands_[0] - hw_commands_[1]) / dist_w;
-  base_x_ += base_dx * dt;
-  base_y_ += base_dy * dt;
-  base_theta_ += base_dtheta * dt;
+//   // Update the free-flyer, i.e. the base notation using the classical
+//   // wheel differentiable kinematics
+//   double base_dx = 0.5 * radius * (hw_commands_[0] + hw_commands_[1]) * cos(base_theta_);
+//   double base_dy = 0.5 * radius * (hw_commands_[0] + hw_commands_[1]) * sin(base_theta_);
+//   double base_dtheta = radius * (hw_commands_[0] - hw_commands_[1]) / dist_w;
+//   base_x_ += base_dx * dt;
+//   base_y_ += base_dy * dt;
+//   base_theta_ += base_dtheta * dt;
 
-  RCLCPP_INFO(
-    rclcpp::get_logger("DiffBotSystemHardware"), "Joints successfully read! (%.5f,%.5f,%.5f)",
-    base_x_, base_y_, base_theta_);
+//   RCLCPP_INFO(
+//     rclcpp::get_logger("DiffBotSystemHardware"), "Joints successfully read! (%.5f,%.5f,%.5f)",
+//     base_x_, base_y_, base_theta_);
 
-  return hardware_interface::return_type::OK;
-}
+//   return hardware_interface::return_type::OK;
+// }
 
 hardware_interface::return_type ros2_control_demo_hardware::DiffBotSystemHardware::write() // Write the command to the robot hardware.
 {
