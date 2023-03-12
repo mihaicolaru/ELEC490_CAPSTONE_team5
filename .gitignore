@@ -1,8 +1,17 @@
-/dev_ws/install
-/dev_ws/log
-/dev_ws/build
-/dev_ws/.vscode
+/dev_ws/install/
+/dev_ws/log/
+/dev_ws/build/
+/dev_ws/.vscode/
 
 /hardware_test/__pycache__/
-dev_ws/src/my_bot
-dev_ws/src/ros2_control_demos
+/dev_ws/src/my_bot/
+/dev_ws/src/ros2_control_demos/
+
+
+/base_ws/install/
+/base_ws/build/
+/base_ws/log/
+
+/bot_ws/install/
+/bot_ws/build/
+bot_ws/log/
