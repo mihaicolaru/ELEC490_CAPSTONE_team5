@@ -204,6 +204,56 @@ def killAllServo():
     kit.servo[SERV_2].angle = 180
     kit.servo[SERV_3].angle = 180
 
+# ========================== GUI START =====================
+def get_patient(room): 
+    patient_data = {"Room 100": "John Doe", 
+                    "Room 101": "Jane Doe",
+                    "Room 102": "Mackenzie Alfred",
+                    "Room 103": "Jasper Chen",
+                    "Room 104": "Alice Ron",
+                    "Room 105": "Samuel Bertrand",
+                    "Room 106": "Janice Ian",
+                    "Room 107": "Regina George",
+                    "Room 108": "Willy Wonka",
+                    "Room 109": "Ralf Joe",
+                    "Room 110": "Nick Jonas",
+                    "Room 111": "Alex Marwin",
+                    "Room 112": "-",
+                    "Room 113": "-",
+                    "Room 114": "-",
+                    "Room 115": "-"}
+    if room in patient_data: 
+        return patient_data[room]
+    return "-"
+    
+
+class ScrollableRadiobuttonFrame(ctk.CTkScrollableFrame):
+    def __init__(self, master, item_list, command=None, **kwargs):
+        super().__init__(master, **kwargs)
+
+        self.command = command
+        self.radiobutton_variable = ctk.StringVar()
+        self.radiobutton_list = []
+        for i, item in enumerate(item_list):
+            self.add_item(item)
+
+    def add_item(self, item):
+        radiobutton = ctk.CTkRadioButton(self, text=item, value=item, variable=self.radiobutton_variable, font=("Roboto", 18))
+        if self.command is not None:
+            radiobutton.configure(command=self.command)
+        radiobutton.grid(row=len(self.radiobutton_list), column=0, pady=(0, 15))
+        self.radiobutton_list.append(radiobutton)
+
+    def remove_item(self, item):
+        for radiobutton in self.radiobutton_list:
+            if item == radiobutton.cget("text"):
+                radiobutton.destroy()
+                self.radiobutton_list.remove(radiobutton)
+                return
+
+    def get_checked_item(self):
+        return self.radiobutton_variable.get()
+
 
 def start_page():
     auth_frame = ctk.CTkFrame(master=root)
@@ -216,7 +266,7 @@ def start_page():
     text.pack(pady=20, padx=10, fill="x", expand=False)
 
     button_frame = ctk.CTkFrame(master=auth_frame)
-    button_frame.pack(pady=20, padx=10)
+    button_frame.pack(pady=(0, 20), padx=10)
 
     button_1 = ctk.CTkButton(master=button_frame, text="1", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("1"))
     button_2 = ctk.CTkButton(master=button_frame, text="2", width=100, height=100, font=("Roboto", 30), corner_radius=0, border_color="black", border_width=1, fg_color="#DDE0E9", text_color="#252843", command=lambda: make_combination("2"))
@@ -239,8 +289,8 @@ def start_page():
     button_7.grid(row=3, column=0)
     button_8.grid(row=3, column=1)
     button_9.grid(row=3, column=2)
-    button_0.grid(row=4, column=0, pady=(0, 100))
-    submit.grid(row=4, column=1, columnspan=2, pady=(0, 100))
+    button_0.grid(row=4, column=0, pady=(0, 200))
+    submit.grid(row=4, column=1, columnspan=2, pady=(0, 200))
 
 
 def choose_compartment():
@@ -262,10 +312,10 @@ def choose_compartment():
 
     for id, status in compartments_status.items(): 
         if status == "Empty": 
-            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 30), text_color="#E95F5F")
+            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 24), text_color="#E95F5F")
             status_label.grid(row=int(id), column=1, padx=(50, 300), sticky="w")
         if status == "Loaded": 
-            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 30), text_color="#8DF074")
+            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 24), text_color="#8DF074")
             status_label.grid(row=int(id), column=1, padx=(50, 300), sticky="w")
 
     submit_button = ctk.CTkButton(master=compartment_frame, text="Submit", width=200, height=50, font=("Roboto", 20), command=lambda: setting_off(compartment_frame))
@@ -273,20 +323,65 @@ def choose_compartment():
 
 def load_compartment(id): 
     load_text = "Load Compartment " + id
+
     compartment_frame = ctk.CTkFrame(master=root)
-    compartment_frame.pack(pady=20, padx=60, fill="both", expand=True)
-    compartment_frame.columnconfigure(index=0, weight=1)
+    compartment_frame.pack(pady=20, padx=20, fill="both", expand=True)
 
     title = ctk.CTkLabel(master=compartment_frame, text=load_text, font=("Roboto", 40))
-    title.grid(row=0, column=0, pady=(200, 30), padx=10)
+    title.pack(pady=20, padx=10, fill="x", expand=False)
 
-    explanation = ctk.CTkLabel(master=compartment_frame, text="Please place load in compartment and close the door once finished.", font=("Roboto", 20))
-    explanation.grid(row=1, column=0, padx=10)
+    options_frame = ctk.CTkFrame(master=compartment_frame)
+    options_frame.pack(pady=10, padx=10, fill="both", expand=True)
 
-    compartments_status[id] = "Loaded"
+    title_info_confirmation = ctk.CTkLabel(master=options_frame, text="Patient and Load Confirmation", font=("Roboto", 20))
+    title_info_confirmation.grid(row=0, column=1, columnspan=2)
+
+    patient_info = ctk.CTkLabel(master=options_frame, text="Patient: -", font=("Roboto", 20))
+    patient_info.grid(row=1, column=1, columnspan=2, padx=10, pady=10, sticky="nw")
     
-    submit_button = ctk.CTkButton(master=compartment_frame, text="Done", width=200, height=50, font=("Roboto", 20), command=lambda: go_to_choose_compartment(compartment_frame))
-    submit_button.grid(row=4, column=0, pady=30, padx=10)
+    room_info = ctk.CTkLabel(master=options_frame, text="Room: -", font=("Roboto", 20))
+    room_info.grid(row=2, column=1, columnspan=2, padx=10, pady=10, sticky="nw")
+
+    load_info = ctk.CTkLabel(master=options_frame, text="Load:", font=("Roboto", 20))
+    load_info.grid(row=3, column=1, padx=(10, 1), pady=10, sticky="nw")
+
+    def load_option_callback(selection):
+        print(selection)
+        if not selection: 
+            selection = "Food"
+        compartments_status[id] = "Loaded with " + selection 
+
+    optionmenu_var = ctk.StringVar(value="Food")  # set initial value
+    load_options = ctk.CTkOptionMenu(master=options_frame,
+                                        width=300,
+                                        values=["Food", "Sheets", "Masks", "Other"],
+                                        variable=optionmenu_var, 
+                                        command=load_option_callback,
+                                        font=("Roboto", 20))
+    load_options.grid(row=3, column=2, padx=(0,10), pady=10, sticky="nw")
+
+    room_select_title = ctk.CTkLabel(master=options_frame, text="Select Room", font=("Roboto", 18))
+    room_select_title.grid(row=0, column=0)
+    
+    room_select = ScrollableRadiobuttonFrame(master=options_frame, width=400, height=250, command=lambda: checkbox_frame_event(room_select.get_checked_item()), item_list=[f"Room {i}" for i in range(100, 115)])
+    room_select.grid(row=1, column=0, rowspan=4, padx=15, pady=15)
+
+    def checkbox_frame_event(room): 
+        patient_text = "Patient: " + get_patient(room)
+        patient_info.configure(text=patient_text, text_color="#8DF074")
+
+        room_text = "Room: " + room
+        room_info.configure(text=room_text, text_color="#8DF074")
+
+
+    explanation = ctk.CTkLabel(master=options_frame, text="Place load in compartment and close the door once finished.", font=("Roboto", 16))
+    explanation.grid(row=4, column=1, columnspan=2, sticky="nsw")
+
+    if compartments_status[id] == "Empty":
+        compartments_status[id] = "Loaded with Food"
+    
+    submit_button = ctk.CTkButton(master=compartment_frame, text="Confirm", width=200, height=50, font=("Roboto", 20), command=lambda: go_to_choose_compartment(compartment_frame))
+    submit_button.pack(pady=30, padx=10)
 
 def set_off(): 
     omw_frame = ctk.CTkFrame(master=root, bg_color="transparent", fg_color="transparent")
@@ -356,7 +451,7 @@ GPIO.add_event_detect(BUT_2, GPIO.RISING, callback=button2, bouncetime=3)
 GPIO.add_event_detect(BUT_3, GPIO.RISING, callback=button3, bouncetime=3)
 
 auth = ""
-unlock_combination = "00"
+unlock_combination = "123"
 
 compartments_status = dict()
 compartments_status["1"] = "Empty"
