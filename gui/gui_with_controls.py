@@ -206,22 +206,11 @@ def killAllServo():
 
 # ========================== GUI START =====================
 def get_patient(room): 
-    patient_data = {"Room 100": "John Doe", 
-                    "Room 101": "Jane Doe",
+    patient_data = {"Room 100": "Jane Doe", 
+                    "Room 101": "Ralf Lauren",
                     "Room 102": "Mackenzie Alfred",
                     "Room 103": "Jasper Chen",
-                    "Room 104": "Alice Ron",
-                    "Room 105": "Samuel Bertrand",
-                    "Room 106": "Janice Ian",
-                    "Room 107": "Regina George",
-                    "Room 108": "Willy Wonka",
-                    "Room 109": "Ralf Joe",
-                    "Room 110": "Nick Jonas",
-                    "Room 111": "Alex Marwin",
-                    "Room 112": "-",
-                    "Room 113": "-",
-                    "Room 114": "-",
-                    "Room 115": "-"}
+                    "Room 104": "Alice Ron"}
     if room in patient_data: 
         return patient_data[room]
     return "-"
@@ -254,7 +243,7 @@ class ScrollableRadiobuttonFrame(ctk.CTkScrollableFrame):
     def get_checked_item(self):
         return self.radiobutton_variable.get()
 
-
+# ======================== PAGES ========================
 def start_page():
     auth_frame = ctk.CTkFrame(master=root)
     auth_frame.pack(pady=20, padx=60, fill="both", expand=True)
@@ -292,34 +281,48 @@ def start_page():
     button_0.grid(row=4, column=0, pady=(0, 200))
     submit.grid(row=4, column=1, columnspan=2, pady=(0, 200))
 
-
 def choose_compartment():
     compartment_frame = ctk.CTkFrame(master=root)
     compartment_frame.pack(pady=20, padx=60, fill="both", expand=True)
     compartment_frame.columnconfigure(index=0, weight=1)
+    compartment_frame.rowconfigure(index=0, weight=0)
+
+    mapping_button = ctk.CTkButton(master=compartment_frame, text="Mapping", width=100, height=40, font=("Roboto", 15), command=lambda: go_to_mapping(compartment_frame))
+    mapping_button.grid(row=0, column=1, sticky="nse", padx=10, pady=10)
 
     label = ctk.CTkLabel(master=compartment_frame, text="Choose compartment to load", font=("Roboto", 40))
-    label.grid(row=0, column=0, columnspan=2, pady=30, padx=10)
+    label.grid(row=0, column=0, columnspan=2, rowspan=2, pady=30, padx=10, sticky="n")
 
     comp1_button = ctk.CTkButton(master=compartment_frame, text="1", width=200, height=75, font=("Roboto", 30), corner_radius=0, fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "1"))
-    comp1_button.grid(row=1, column=0, pady=(30, 10), padx=10, sticky="e")
+    comp1_button.grid(row=2, column=0, pady=(30, 10), padx=10, sticky="e")
 
     comp2_button = ctk.CTkButton(master=compartment_frame, text="2", width=200, height=75, font=("Roboto", 30), corner_radius=0, fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "2"))
-    comp2_button.grid(row=2, column=0, pady=(0, 10), padx=10, sticky="e")
+    comp2_button.grid(row=3, column=0, pady=(0, 10), padx=10, sticky="e")
 
     comp3_button = ctk.CTkButton(master=compartment_frame, text="3", width=200, height=75, font=("Roboto", 30), corner_radius=0, fg_color="#DDE0E9", text_color="#252843", command=lambda: go_to_load_compartment(compartment_frame, "3"))
-    comp3_button.grid(row=3, column=0, pady=(0, 10), padx=10, sticky="e")
+    comp3_button.grid(row=4, column=0, pady=(0, 10), padx=10, sticky="e")
 
     for id, status in compartments_status.items(): 
         if status == "Empty": 
-            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 24), text_color="#E95F5F")
-            status_label.grid(row=int(id), column=1, padx=(50, 300), sticky="w")
-        if status == "Loaded": 
-            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 24), text_color="#8DF074")
-            status_label.grid(row=int(id), column=1, padx=(50, 300), sticky="w")
+            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 20), text_color="#E95F5F")
+            status_label.grid(row=int(id)+1, column=1, padx=(50, 300), sticky="w")
+        else: 
+            status_label = ctk.CTkLabel(master=compartment_frame, text=status, font=("Roboto", 20), text_color="#8DF074")
+            status_label.grid(row=int(id)+1, column=1, padx=(50, 300), sticky="w")
 
     submit_button = ctk.CTkButton(master=compartment_frame, text="Submit", width=200, height=50, font=("Roboto", 20), command=lambda: setting_off(compartment_frame))
-    submit_button.grid(row=4, column=0, columnspan=2, pady=30, padx=10)
+    submit_button.grid(row=5, column=0, columnspan=2, pady=30, padx=10)
+
+def mapping(): 
+    mapping_frame = ctk.CTkFrame(master=root, bg_color="transparent", fg_color="transparent")
+    mapping_frame.pack(pady=20, padx=60, fill="y", expand=True)
+    mapping_frame.rowconfigure(index=0, weight=2)
+
+    text = ctk.CTkLabel(master=mapping_frame, text="Mapping environment", font=("Roboto", 40))
+    text.grid(row=0, column=0, pady=20)
+
+    done_button = ctk.CTkButton(master=mapping_frame, text="Done", font=("Roboto", 20), width=110, height=50, command=lambda: go_to_choose_compartment(mapping_frame))
+    done_button.grid(row=1, column=0, pady=20)
 
 def load_compartment(id): 
     load_text = "Load Compartment " + id
@@ -363,7 +366,7 @@ def load_compartment(id):
     room_select_title = ctk.CTkLabel(master=options_frame, text="Select Room", font=("Roboto", 18))
     room_select_title.grid(row=0, column=0)
     
-    room_select = ScrollableRadiobuttonFrame(master=options_frame, width=400, height=250, command=lambda: checkbox_frame_event(room_select.get_checked_item()), item_list=[f"Room {i}" for i in range(100, 115)])
+    room_select = ScrollableRadiobuttonFrame(master=options_frame, width=400, height=250, command=lambda: checkbox_frame_event(room_select.get_checked_item()), item_list=[f"Room {i}" for i in range(100, 105)])
     room_select.grid(row=1, column=0, rowspan=4, padx=15, pady=15)
 
     def checkbox_frame_event(room): 
@@ -372,7 +375,7 @@ def load_compartment(id):
 
         room_text = "Room: " + room
         room_info.configure(text=room_text, text_color="#8DF074")
-
+        rooms[int(id) - 1] = room
 
     explanation = ctk.CTkLabel(master=options_frame, text="Place load in compartment and close the door once finished.", font=("Roboto", 16))
     explanation.grid(row=4, column=1, columnspan=2, sticky="nsw")
@@ -388,14 +391,56 @@ def set_off():
     omw_frame.pack(pady=20, padx=60, fill="y", expand=True)
     omw_frame.rowconfigure(index=0, weight=1)
 
-    text = ctk.CTkLabel(master=omw_frame, text="On my way to patient!", font=("Roboto", 40))
-    text.grid(row=0, column=0, columnspan=2, pady=20, padx=10)
+    for i in range(len(rooms)):
+        if rooms[i] != "-":
+            msg = "On my way to " + rooms[i]
+            text = ctk.CTkLabel(master=omw_frame, text=msg, font=("Roboto", 40))
+            text.grid(row=0, column=0, columnspan=2, pady=20, padx=10)
 
-    login_button = ctk.CTkButton(master=omw_frame, text="Login", font=("Roboto", 20), width=110, height=50, command=lambda: go_to_auth_page(omw_frame))
-    login_button.grid(row=1, column=0, pady=30, padx=10, sticky="nw")
+            login_button = ctk.CTkButton(master=omw_frame, text="Login", font=("Roboto", 20), width=110, height=50, command=lambda: go_to_auth_page(omw_frame))
+            login_button.grid(row=1, column=0, pady=30, padx=10, sticky="nw")
 
-    compartment_button = ctk.CTkButton(master=omw_frame, text="Select Compartments", font=("Roboto", 20), width=250, height=50, command=lambda: go_to_choose_compartment(omw_frame))
-    compartment_button.grid(row=1, column=1, pady=30, padx=10, sticky="ne")
+            patient_button = ctk.CTkButton(master=omw_frame, text="Patient", font=("Roboto", 20), width=250, height=50, command=lambda: go_to_patient(omw_frame))
+            patient_button.grid(row=1, column=1, pady=30, padx=10, sticky="ne")
+            break
+
+        if i == 2 and rooms[i] == "-":
+            text = ctk.CTkLabel(master=omw_frame, text="No deliveries remaining. Returning to base", font=("Roboto", 40))
+            text.grid(row=0, column=0, pady=20, padx=10)
+
+            login_button = ctk.CTkButton(master=omw_frame, text="Login", font=("Roboto", 20), width=110, height=50, command=lambda: go_to_auth_page(omw_frame))
+            login_button.grid(row=1, column=0, pady=30, padx=10)
+
+def patient_page(): 
+    patient_frame = ctk.CTkFrame(master=root, bg_color="transparent", fg_color="transparent")
+    patient_frame.pack(pady=20, padx=60, fill="y", expand=True)
+    patient_frame.rowconfigure(index=1, weight=1)
+
+    for compartment in range(len(rooms)):
+        if rooms[compartment] != "-":
+            turn_on_led(str(compartment+1))
+            unlock_compartment(str(compartment+1))
+        
+            patient_name = get_patient(rooms[compartment])
+            text1 = ctk.CTkLabel(master=patient_frame, text=patient_name, font=("Roboto", 40), text_color="#8DF074")
+            text1.grid(row=0, column=0, columnspan=2, pady=(100, 5), padx=10, sticky="s")
+
+            msg = "Please remove delivery from compartment " + str(compartment + 1)
+            text2 = ctk.CTkLabel(master=patient_frame, text=msg, font=("Roboto", 40))
+            text2.grid(row=1, column=0, columnspan=2, pady=20, padx=10, sticky="n")
+            
+            text3 = ctk.CTkLabel(master=patient_frame, text="Close compartment once finished.", font=("Roboto", 30))
+            text3.grid(row=2, column=0, columnspan=2, pady=20, padx=10, sticky="n")
+
+            rooms[compartment] = "-"
+            compartments_status[str(compartment + 1)] = "Empty"
+            break
+
+    login_button = ctk.CTkButton(master=patient_frame, text="Login", font=("Roboto", 20), width=110, height=50, command=lambda: go_to_auth_page(patient_frame))
+    login_button.grid(row=2, column=0, pady=50, padx=10, sticky="ne")
+
+    next_patient_button = ctk.CTkButton(master=patient_frame, text="Next patient", font=("Roboto", 20), width=250, height=50, command=lambda: setting_off(patient_frame))
+    next_patient_button.grid(row=2, column=1, pady=50, padx=10, sticky="nw")
 
 # ======================== BUTTON COMMANDS ========================
 
@@ -409,8 +454,8 @@ def go_to_choose_compartment(frame):
         frame.pack_forget()
         choose_compartment()
     else:
-        warn = ctk.CTkLabel(master=frame, text="Wrong password. Try again.", font=("Roboto", 20))
-        warn.grid(row=5, column=0, columnspan=3, pady=10, padx=10)
+        warn = ctk.CTkLabel(master=frame, text="Wrong password. Try again.", font=("Roboto", 14))
+        warn.pack(side="bottom")
         auth = ""
 
 def go_to_load_compartment(frame, id):
@@ -420,17 +465,24 @@ def go_to_load_compartment(frame, id):
     load_compartment(id)
     print("Load compartment page")
 
+def go_to_mapping(frame): 
+    frame.pack_forget() 
+    mapping()
+
 def setting_off(frame):
+    for i in range(0, 2): 
+        turn_off_led(i)
     frame.pack_forget()
     set_off()
     return 
 
+def go_to_patient(frame): 
+    frame.pack_forget()
+    patient_page()
+
 def go_to_auth_page(frame): 
     global auth 
     auth = ""
-    compartments_status["1"] = "Empty"
-    compartments_status["2"] = "Empty"
-    compartments_status["3"] = "Empty"
     frame.pack_forget()
     start_page()
 
@@ -457,6 +509,9 @@ compartments_status = dict()
 compartments_status["1"] = "Empty"
 compartments_status["2"] = "Empty"
 compartments_status["3"] = "Empty"
+
+rooms = dict()
+rooms = ["-", "-", "-"]
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
